@@ -66,7 +66,6 @@ def plotCurve():
 	plt.show()
 
 
-
 if __name__ == '__main__':
 	#plotGraph([[3], [3], [3, 4], [0, 2, 1], [2]], ['A'+str(i+1) for i in range(5)])
 	
