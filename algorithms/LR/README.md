@@ -8,3 +8,9 @@
 
 4. 不太适合类别特征。
 
+5. 逻辑回归为什么用sigmod作为最后的转换
+    - 正例的对数几率(西瓜书P58)
+    - 可导
+    - ln(y/(1-y)) = wx+b    =>  y = 1/(1+e^(-(wx+b))) 也叫逻辑函数logistic function
+    - 交叉熵和逻辑回归的关系
+    - logistic loss is sometimes called cross-entropy loss
