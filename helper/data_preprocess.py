@@ -1,52 +1,14 @@
 #coding=utf-8
 
+'''
+	Some important operations before training the model, including sample operation, batch operation and so on.
+
+	Implemente sample(including undersample and oversample) operatiion and batch operatiion.
+
+'''
+
 import pandas as pd
 import numpy as np
-
-
-def readFromTable(fileName, names=None):
-	return pd.read_table(fileName, sep=' ', index_col=False, header=None, names=names)
-
-
-def produce_value_day_range(values, day_range, value_name='value', day_name='day'):
-	'''
-		args:
-			values: list 
-			date_range: list
-		return:
-			for every value in values, produce every day in day_range to attach
-		examples:
-			produce_value_day_range(['1', '2', '3'], ['2015-01-01', '2015-01-02', '2015-01-03'])
-			
-			return :
-				value_name,day_name
-				1,2015-01-01
-				1,2015-01-02
-				1,2015-01-03
-				2,2015-01-01
-				2,2015-01-02
-				2,2015-01-03
-				3,2015-01-01
-				3,2015-01-02
-				3,2015-01-03
-	'''
-	values_range_frame = pd.DataFrame({value_name: values, 'tmp': 1})
-	day_range_frame = pd.DataFrame({day_name: day_range, 'tmp': 1})
-	values_day_frame = pd.merge(values_range_frame, day_range_frame, on='tmp', how='left')
-	values_day_frame = values_day_frame.drop('tmp', axis=1)
-	return values_day_frame
-
-
-def get_feature_value_map(frame, feature):
-	'''
-		用于对一些中文字符串进行映射
-	'''
-	frame[feature] = frame[feature].map(lambda x: (str(x)).strip())
-	values = list(frame[feature].drop_duplicates())
-	ans = {}
-	for one in values:
-		ans[one] = values.index(one) + 1
-	return ans
 
 
 def data_iterator(orig_X, orig_label=None, batch_size=10, shuffle=False, is_normalize=False):
@@ -91,6 +53,7 @@ def sample(x, p=0.025, col='y'):
     	上采样或者下采样, 根据正样本比例来
     :param p, 采样过后正样本的比例
     :param col, 按照哪一列确定正样本比例
+    :param x, DataFrame类型, 原始数据
     '''
 
     pos = x[x[col] == 1]
