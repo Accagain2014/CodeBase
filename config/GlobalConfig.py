@@ -1,5 +1,5 @@
 #coding=utf-8
 
-trainFile = './data/trainingData.txt.txt'
-testFile = './data/testingData.txt.txt'
+trainFile = './NB_CL_data/trainingData.txt.txt'
+testFile = './NB_CL_data/testingData.txt.txt'
 resultFile = './result/NaiveBayesClassifier.csv'

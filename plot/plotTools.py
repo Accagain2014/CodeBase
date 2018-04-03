@@ -65,6 +65,18 @@ def plotCurve():
 	plt.savefig('S-curve.png')
 	plt.show()
 
+def show_bars(fr, key_col, others, kind='bar'):
+	'''
+		pandas 画图
+	:param fr:
+	:param key_col:
+	:param others:
+	:param kind:
+	:return:
+	''''''
+    fr.plot(x=key_col, y=others, xticks=fr[key_col].values, kind=kind, figsize=(15, 8))
+    plt.grid(True)
+    plt.show()
 
 if __name__ == '__main__':
 	#plotGraph([[3], [3], [3, 4], [0, 2, 1], [2]], ['A'+str(i+1) for i in range(5)])
