@@ -1,0 +1,213 @@
+
+<!-- saved from url=(0047)http://www.psi.toronto.edu/matrix/calculus.html -->
+<html class="gr__psi_toronto_edu"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<meta name="Generator" content="Microsoft Word 97">
+<title>Matrix Manual: Matrix Calculus</title>
+<meta name="Template" content="E:\Program Files\Microsoft Office\Office\html.dot">
+</head>
+<body link="#0000ff" vlink="#800080" data-gr-c-s-loaded="true">
+
+<p align="CENTER"><font size="7">Matrix Reference Manual<br>
+</font><font size="6">Matrix Calculus</font></p>
+<p></p><hr><p></p>
+<p>Go to: <a href="http://www.psi.toronto.edu/matrix/intro.html#Intro">Introduction</a>, <a href="http://www.psi.toronto.edu/matrix/intro.html#Notation">Notation</a>, <a href="http://www.psi.toronto.edu/matrix/index.html">Index</a> </p>
+<p></p><hr><p></p>
+<p></p><hr><p></p>
+<h2>Contents </h2>
+
+<ul>
+<li>Notation </li>
+<li>Derivatives of Linear Products </li>
+<li>Derivatives of Quadratic Products </li></ul>
+
+<h2>Notation </h2>
+
+<ul>
+<li><i>d/dx </i>(<b>y</b>)<i> </i>is a vector whose <i>(i)</i> element is <i>dy(i)/dx</i> </li>
+<li><i>d/d</i><b>x</b> (y) is a vector whose <i>(i)</i> element is <i>dy/dx(i)</i> </li>
+<li><i>d/d</i><b>x</b> (<b>y</b><i><sup>T</sup></i>) is a matrix whose <i>(i,j)</i> element is <i>dy(j)/dx(i)</i> </li>
+<li><i>d/dx </i>(<b>Y</b>) is a matrix whose <i>(i,j)</i> element is <i>dy(i,j)/dx</i> </li>
+<li><i>d/d</i><b>X</b> (y) is a matrix whose <i>(i,j)</i> element is <i>dy/dx(i,j)</i> </li></ul>
+
+<p>Note that the Hermitian transpose is not used because complex conjugates are not analytic. </p>
+<p>In the expressions below matrices and vectors <b>A</b>, <b>B</b>, <b>C</b> do not depend on <b>X</b>. </p>
+<h2>Derivatives of Linear Products </h2>
+
+<ul>
+<li><i>d/dx </i>(<b>AYB</b>)<i> =</i><b>A</b> *<i> d/dx </i>(<b>Y</b>) * <b>B</b> </li>
+
+<ul>
+<li><i>d/dx </i>(<b>Ay</b>)<i> =</i><b>A</b> *<i> d/dx </i>(<b>y</b>) </li></ul>
+
+<li><i>d/d</i><b>x</b><i> </i>(<b>x</b><i><sup>T</sup></i><b>A</b>)<i> =</i><b>A</b> </li>
+
+<ul>
+<li><i>d/d</i><b>x</b><i> </i>(<b>x</b><i><sup>T</sup></i>)<i> =</i><b>I</b> </li>
+<li><i>d/d</i><b>x</b><i> </i>(<b>x</b><i><sup>T</sup></i><b>a</b>)<i> = d/d</i><b>x</b><i> </i>(<b>a</b><i><sup>T</sup></i><b>x</b>) = <b>a</b> </li></ul>
+
+<li><i>d/d</i><b>X</b><i> </i>(<b>a</b><i><sup>T</sup></i><b>Xb</b>) = <b>ab</b><i><sup>T</sup></i> </li>
+
+<ul>
+<li><i>d/d</i><b>X</b><i> </i>(<b>a</b><i><sup>T</sup></i><b>Xa</b>) = <i>d/d</i><b>X</b><i> </i>(<b>a</b><i><sup>T</sup></i><b>X</b><i><sup>T</sup></i><b>a</b>) = <b>aa</b><i><sup>T</sup></i> </li></ul>
+
+<li><i>d/d</i><b>X</b><i> </i>(<b>a</b><i><sup>T</sup></i><b>X</b><i><sup>T</sup></i><b>b</b>) = <b>ba</b><i><sup>T</sup></i> </li>
+<li><i>d/dx </i>(<b>YZ</b>)<i> =</i><b>Y</b> *<i> d/dx </i>(<b>Z</b>) + <i>d/dx </i>(<b>Y</b>)<b> * Z</b> </li></ul>
+
+<h2>Derivatives of Quadratic Products </h2>
+
+<ul>
+<li>d/d<b>x</b> (<b>Ax</b>+<b>b</b>)<i><sup>T</sup></i><b>C</b>(<b>D</b>x+<b>e</b>) = <b>A</b><i><sup>T</sup></i><b>C(Dx+e)</b> + <b>D</b><i><sup>T</sup></i><b>C</b><i><sup>T</sup></i><b>(Ax+b) </b></li><ul>
+
+<b>
+</b><li>d/d<b>x</b> (<b>x</b><i><sup>T</sup></i><b>Cx</b>) = (<b>C</b>+<b>C</b><i><sup>T</sup></i>)<b>x </b></li><ul>
+
+<b>
+</b><li><font color="#ff0000">[C: symmetric]: </font>d/d<b>x</b> (<b>x</b><i><sup>T</sup></i><b>Cx</b>) = 2<b>Cx </b></li>
+<li>d/d<b>x</b> (<b>x</b><i><sup>T</sup></i><b>x</b>) = 2<b>x</b></li></ul>
+
+<li>d/d<b>x</b> (<b>Ax</b>+<b>b</b>)<i><sup>T</sup></i> (<b>D</b>x+<b>e</b>) = <b>A</b><i><sup>T</sup></i><b> (Dx+e)</b> + <b>D</b><i><sup>T</sup></i><b> (Ax+b) </b></li><ul>
+
+<b>
+</b><li>d/d<b>x</b> (<b>Ax</b>+<b>b</b>)<i><sup>T</sup></i> (<b>A</b>x+<b>b</b>) = 2<b>A</b><i><sup>T</sup></i><b> (Ax+b)</b></li></ul>
+
+<li><font color="#ff0000">[C: symmetric]: </font>d/d<b>x</b> (<b>Ax</b>+<b>b</b>)<i><sup>T</sup></i><b>C</b>(<b>A</b>x+<b>b</b>) = 2<b>A</b><i><sup>T</sup></i><b>C(Ax+b)</b></li></ul>
+
+<li><i>d/d</i><b>X</b><i> </i>(<b>a</b><i><sup>T</sup></i><b>X</b><i><sup>T</sup></i><b>Xb</b>) = <b>X(ab</b><i><sup>T</sup></i><b> + ba</b><i><sup>T</sup></i><b>)</b> </li>
+
+<ul>
+<li><i>d/d</i><b>X</b><i> </i>(<b>a</b><i><sup>T</sup></i><b>X</b><i><sup>T</sup></i><b>Xa</b>) = 2<b>Xaa</b><i><sup>T</sup></i> </li></ul>
+
+<li><i>d/d</i><b>X</b><i> </i>(<b>a</b><i><sup>T</sup></i><b>X</b><i><sup>T</sup></i><b>CXb</b>) = <b>C</b><i><sup>T</sup></i><b>Xab</b><i><sup>T</sup></i><b> + CXba</b><i><sup>T</sup></i> </li>
+
+<ul>
+<li><i>d/d</i><b>X</b><i> </i>(<b>a</b><i><sup>T</sup></i><b>X</b><i><sup>T</sup></i><b>CXa</b>) = <b>(C + C</b><i><sup>T</sup></i><b>)Xaa</b><i><sup>T</sup></i> </li>
+<li><font color="#ff0000">[<b>C</b>:<i>Symmetric</i>]</font> <i>d/d</i><b>X</b><i> </i>(<b>a</b><i><sup>T</sup></i><b>X</b><i><sup>T</sup></i><b>CXa</b>) = <b>2CXaa</b><i><sup>T</sup></i> </li></ul>
+
+<li><i>d/d</i><b>X</b><i> </i>((<b>Xa+b)</b><i><sup>T</sup></i><b>C(Xa+b)</b>) = (<b>C+C</b><i><sup>T</sup></i><b>)(Xa+b)a</b><i><sup>T</sup></i> </li></ul>
+
+<h2>Derivatives of Cubic Products </h2>
+
+<ul>
+<li><i>d/d</i><b>x</b><i> </i>(<b>x</b><i><sup>T</sup></i><b>Axx</b><i><sup>T</sup></i>) = (<b>A+A</b><i><sup>T</sup></i><b>)xx</b><i><sup>T</sup></i><b>+x</b><i><sup>T</sup></i><b>AxI</b> </li></ul>
+
+<h2>Derivatives of Inverses </h2>
+
+<ul>
+<li><i>d/dx </i>(<b>Y</b><sup>-1</sup>) = <b>-Y</b><sup>-1</sup><i>d/dx </i>(<b>Y</b>)<b>Y</b><sup>-1</sup> </li></ul>
+
+<h2>Derivative of Trace </h2>
+<p>Note: matrix dimensions must result in an <i>n*n</i> argument for tr(). </p>
+
+<ul>
+  <li><i>d/d</i><b>X</b><i> </i>(tr<b>(X)</b>) = <b>I</b> </li>
+  <li><i>d/d</i><b>X</b><i> </i>(tr<b>(X</b><i><sup>k</sup></i><b>)</b>) =<i>k</i><b>(X</b><i><sup>k</sup></i><sup>-1</sup><b>)</b><i><sup>T</sup></i> 
+  </li>
+  <li><i>d/d</i><b>X</b><i> </i>(tr<b>(AX</b><i><sup>k</sup></i><b>)</b>) =<i> 
+    </i><b>SUM</b><sub><i>r=0:k</i>-1</sub><b>(X</b><i><sup>r</sup></i><b>AX</b><i><sup>k-r</sup></i><sup>-1</sup><b>)</b><i><sup>T</sup></i> 
+  </li>
+  <li><i>d/d</i><b>X</b><i> </i>(tr<b>(AX</b><sup>-1</sup><b>B)</b>) = <b>-(X</b><sup>-1</sup><b>BAX</b><sup>-1</sup><b>)</b><i><sup>T</sup></i> 
+    <ul>
+      <li><i>d/d</i><b>X</b><i> </i>(tr<b>(AX</b><sup>-1</sup><b>)</b>) =<i>d/d</i><b>X</b><i> 
+        </i>(tr<b>(X</b><sup>-1</sup><b>A)</b>) = <b>-X</b><sup>-<i>T</i></sup><b>A</b><i><sup>T</sup></i><b>X</b><sup>-<i>T</i></sup> 
+      </li>
+    </ul>
+  </li>
+  <li><i>d/d</i><b>X</b><i> </i>(tr<b>(A</b><i><sup>T</sup></i><b>XB</b><i><sup>T</sup></i>)) 
+    = <i>d/d</i><b>X</b><i> </i>(tr<b>(BX</b><i><sup>T</sup></i><b>A</b><i><sup></sup></i>)) 
+    = <b>AB</b> 
+    <ul>
+      <li><i>d/d</i><b>X</b><i> </i>(tr<b>(XA</b><i><sup>T</sup></i><b>)</b>) 
+        = <i>d/d</i><b>X</b><i> </i>(<b>tr(A</b><i><sup>T</sup></i><b>X)</b>) 
+        =<i>d/d</i><b>X</b><i> </i>(tr<b>(X</b><i><sup>T</sup></i><b>A)</b>) = 
+        <i>d/d</i><b>X</b><i> </i>(<b>tr(AX</b><i><sup>T</sup></i><b>)</b>) <b>= 
+        A</b> </li>
+    </ul>
+  </li>
+  <li><i>d/d</i><b>X</b><i> </i>(tr<b>(AXBX</b><i><sup>T</sup></i><b>)</b>) =<b> 
+    A</b><i><sup>T</sup></i><b>XB</b><i><sup>T</sup></i> + <b> AXB</b> 
+    <ul>
+      <li><i>d/d</i><b>X</b><i> </i>(tr<b>(XAX</b><i><sup>T</sup></i><b>)</b>) 
+        =<b> X(A+A</b><i><sup>T</sup></i><b>)</b></li>
+      <li><i>d/d</i><b>X</b><i> </i>(tr<b>(X</b><i><sup>T</sup></i><b>AX)</b>) 
+        =<b> X</b><i><sup>T</sup></i><b>(A+A</b><i><sup>T</sup></i><b>)</b></li>
+      <li><i>d/d</i><b>X</b><i> </i>(tr<b>(AX</b><i><sup>T</sup></i><b>X)</b>) 
+        =<b> (A+A</b><i><sup>T</sup></i><b>)X</b> </li>
+    </ul>
+  </li>
+  <li><i>d/d</i><b>X</b><i> </i>(tr<b>(AXBX)</b>) =<b> A</b><i><sup>T</sup></i><b>X</b><i><sup>T</sup></i><b>B</b><i><sup>T</sup></i> 
+    + <b> </b><b>B</b><i><sup>T</sup></i><b>X</b><i><sup>T</sup></i><b>A</b><i><sup>T</sup></i> 
+  </li>
+  <li> </li>
+  <li><font color="#ff0000">[C:<i>symmetric</i>]</font> <i>d/d</i><b>X</b><i> 
+    </i>(<b>tr((X</b><i><sup>T</sup></i><b>CX)</b><sup>-1</sup><b>A</b>) = <i>d/d</i><b>X</b><i> 
+    </i>(<b>tr(A (X</b><i><sup>T</sup></i><b>CX)</b><sup>-1</sup>) =<b> -(CX(X</b><i><sup>T</sup></i><b>CX)</b><sup>-1</sup><b>)(A+A</b><i><sup>T</sup></i><b>)(X</b><i><sup>T</sup></i><b>CX)</b><sup>-1</sup> 
+  </li>
+  <li><font color="#ff0000">[B,C:<i>symmetric</i>]</font> <i>d/d</i><b>X</b><i> 
+    </i>(<b>tr((X</b><i><sup>T</sup></i><b>CX)</b><sup>-1</sup><b>(X</b><i><sup>T</sup></i><b>BX)</b>) 
+    = <i>d/d</i><b>X</b><i> </i>(<b>tr( (X</b><i><sup>T</sup></i><b>BX)(X</b><i><sup>T</sup></i><b>CX)</b><sup>-1</sup>) 
+    = <b>-2(CX(X</b><i><sup>T</sup></i><b>CX)</b><sup>-1</sup><b>)X</b><i><sup>T</sup></i><b>BX(X</b><i><sup>T</sup></i><b>CX)</b><sup>-1</sup><b> 
+    + 2BX(X</b><i><sup>T</sup></i><b>CX)</b><sup>-1</sup> </li>
+  <li></li>
+</ul>
+
+<h2>Derivative of Determinant </h2>
+<p>Note: matrix dimensions must result in an <i>n*n</i> argument for det(). </p>
+
+<ul>
+  <li><i>d/d</i><b>X</b><i> </i>(det<b>(X)</b>) = <i>d/d</i><b>X</b><i> </i>(det<b>(X</b><i><sup>T</sup></i><b>)</b>) 
+    = det<b>(X)*X</b><sup>-<i>T</i></sup> </li>
+  <ul>
+    <li><i>d/d</i><b>X</b><i> </i>(det<b>(AXB)</b>) = det<b>(AXB)*X</b><sup>-<i>T</i></sup> 
+    </li>
+    <li><i>d/d</i><b>X</b><i> </i>(ln(det<b>(AXB))</b>) = <b>X</b><sup>-<i>T</i></sup> 
+    </li>
+  </ul>
+  <li><i>d/d</i><b>X</b><i> </i>(det<b>(X</b><i><sup>k</sup></i><b>)</b>) = <i>k</i>*det<b>(X</b><i><sup>k</sup></i><b>)</b><b>*X</b><sup>-<i>T</i></sup> 
+    <ul>
+      <li><i>d/d</i><b>X</b><i> </i>(ln(det<b>(X</b><i><sup>k</sup></i><b>)</b>)) 
+        = <i>k</i><b>X</b><sup>-<i>T</i></sup> </li>
+    </ul>
+  </li>
+  <li><font color="#ff0000">[<i>Real</i>]</font><i> d/d</i><b>X</b><i> </i>(det<b>(X</b><i><sup>T</sup></i><b>CX)</b>) 
+    = det<b>(X</b><i><sup>T</sup></i><b>CX)*(C+C</b><i><sup>T</sup></i><b>)X(X</b><i><sup>T</sup></i><b>CX)</b><sup>-1</sup> 
+  </li>
+  <ul>
+    <li><font color="#ff0000">[<b>C</b>: <i>Real,Symmetric</i>]</font> <i>d/d</i><b>X</b><i> 
+      </i>(det<b>(X</b><i><sup>T</sup></i><b>CX)</b>) = 2det<b>(X</b><i><sup>T</sup></i><b>CX)* 
+      CX(X</b><i><sup>T</sup></i><b>CX)</b><sup>-1</sup> </li>
+  </ul>
+  <li><font color="#ff0000">[<b>C</b>: <i>Real,Symmetricc</i>]</font> <i>d/d</i><b>X</b><i> 
+    </i>(ln(det<b>(X</b><i><sup>T</sup></i><b>CX))</b>) = 2<b>CX(X</b><i><sup>T</sup></i><b>CX)</b><sup>-1</sup> 
+  </li>
+</ul>
+
+<h2><a name="Jacobian">Jacobian</a> </h2>
+<p>If <b>y</b> is a function of <b>x</b>, then <i>d</i><b>y</b><i><sup>T</sup></i>/d<b>x</b> is the Jacobian matrix of <b>y</b> with respect to <b>x</b>. </p>
+<p>Its determinant, |<i>d</i><b>y</b><i><sup>T</sup></i>/d<b>x</b>|, is the <i>Jacobian</i> of <b>y</b> with respect to <b>x</b> and represents the ratio of the hyper-volumes <i>d</i><b>y</b> and <i>d</i><b>x</b>. The Jacobian occurs when changing variables in an integration: Integral(f(<b>y</b>)d<b>y</b>)=Integral(f(<b>y</b>(<b>x</b>)) |<i>d</i><b>y</b><i><sup>T</sup></i>/<i>d</i><b>x</b>| d<b>x</b>). </p>
+<h2>Hessian matrix </h2>
+<p>If f is a function of <b>x</b> then the symmetric matrix d<sup>2</sup>f/d<b>x</b><sup>2</sup> = <b>d</b>/d<b>x</b><i><sup>T</sup></i>(df/d<b>x</b>) is the <i>Hessian</i> matrix of f(<b>x</b>). A value of <b>x</b> for which df/d<b>x</b> = <b>0</b> corresponds to a minimum, maximum or saddle point according to whether the Hessian is positive definite, negative definite or indefinite.</p>
+
+<ul>
+<li>d<sup>2</sup>/d<b>x</b><sup>2</sup> (<b>a</b><i><sup>T</sup></i><b>x</b>) = 0 </li>
+<li>d<sup>2</sup>/d<b>x</b><sup>2</sup> (<b>Ax</b>+<b>b</b>)<i><sup>T</sup></i><b>C</b>(<b>D</b>x+<b>e</b>) = <b>A</b><i><sup>T</sup></i><b>CD</b> + <b>D</b><i><sup>T</sup></i><b>C</b><i><sup>T</sup></i><b>A </b></li><ul>
+
+<b>
+</b><li>d<sup>2</sup>/d<b>x</b><sup>2</sup> (<b>x</b><i><sup>T</sup></i><b>Cx</b>) = <b>C</b>+<b>C</b><i><sup>T </sup></i></li><i></i><ul>
+
+<sup><i>
+</i></sup><li>d<sup>2</sup>/d<b>x</b><sup>2</sup> (<b>x</b><i><sup>T</sup></i><b>x</b>) = 2<b>I</b></li></ul>
+
+<li>d<sup>2</sup>/d<b>x</b><sup>2</sup> (<b>Ax</b>+<b>b</b>)<i><sup>T</sup></i> (<b>D</b>x+<b>e</b>) = <b>A</b><i><sup>T</sup></i><b>D</b> + <b>D</b><i><sup>T</sup></i><b>A </b></li><ul>
+
+<b>
+</b><li>d<sup>2</sup>/d<b>x</b><sup>2</sup> (<b>Ax</b>+<b>b</b>)<i><sup>T</sup></i> (<b>A</b>x+<b>b</b>) = 2<b>A</b><i><sup>T</sup></i><b>A</b></li></ul>
+
+<li><font color="#ff0000">[C: symmetric]: </font>d<sup>2</sup>/d<b>x</b><sup>2</sup> (<b>Ax</b>+<b>b</b>)<i><sup>T</sup></i><b>C</b>(<b>A</b>x+<b>b</b>) = 2<b>A</b><i><sup>T</sup></i><b>CA</b></li></ul>
+</ul>
+
+<p></p><hr><p></p>
+<p>The Matrix Reference Manual is written by <a href="http://www.ee.ic.ac.uk/hp/staff/dmb/dmb.html">Mike Brookes</a>, Imperial College, London, UK. Please send any comments or suggestions to <a href="mailto:mike.brookes@ic.ac.uk">mike.brookes@ic.ac.uk</a> </p>
+<p></p><hr><p></p>
+
+</body></html>
