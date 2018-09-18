@@ -1,6 +1,7 @@
 #coding=utf-8
 import time, datetime
 import dateutil.relativedelta
+import pandas as pd
 
 '''
 	Common date operation functions.
@@ -137,7 +138,6 @@ def readFromTable(fileName, names=None):
 
 
 if __name__ == '__main__':
-	help(is_leap)
 	print get_pre_month('2016-01-28', 0)
 	print move_days('2016-02-01', month_days('2016-02-01'))
 	print month_days('2016-11-30')
@@ -146,5 +146,3 @@ if __name__ == '__main__':
 	print get_range_days('2016-02-27', 5)
 	print get_diff_days('2016-02-01', '2016-02-03')
 	print get_pre_month('2016-01-28')
-	#print help(datetime.timedelta)
-	#print help(datetime)

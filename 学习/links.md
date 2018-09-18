@@ -7,6 +7,7 @@
 
 - [读书推荐](https://blog.csdn.net/ffeng271/article/details/7164498)
 
+- [董西成博客-hadoop](http://dongxicheng.org/recommend/)
 
 
 ## 人物
