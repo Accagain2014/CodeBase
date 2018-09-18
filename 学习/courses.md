@@ -24,7 +24,8 @@
     - [IE and Knowledge Discovery](http://nlp.cs.rpi.edu/course/spring15/ie.html)
     - [CSEP 517: Natural Language Processing](http://courses.cs.washington.edu/courses/csep517/)
     - 
-    
+- Data Minning
+    - [stanford CS246 Mining Massive Data Sets](http://web.stanford.edu/class/cs246/handouts.html)
 
 ## 分布式
 - [mit 6.824](https://pdos.csail.mit.edu/6.824/schedule.html)
