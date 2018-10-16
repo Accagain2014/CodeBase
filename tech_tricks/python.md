@@ -1,0 +1,4 @@
+- 注意list index 如果有重复元素的话 得不到当前的
+    - 可以用 for index, item in enumerate(list): 解决
+- 字符串直接相加，当长度很大时的很慢，可以用list append，然后再转换成字符串
+- xrange, python2 range(1, huge)时生成很大的list, 浪费时间
