@@ -14,3 +14,5 @@
     - ln(y/(1-y)) = wx+b    =>  y = 1/(1+e^(-(wx+b))) 也叫逻辑函数logistic function
     - 交叉熵和逻辑回归的关系
     - logistic loss is sometimes called cross-entropy loss
+    
+6. 

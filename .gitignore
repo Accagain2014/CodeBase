@@ -1,9 +1,9 @@
 # My configurations
 test.py
 .idea/
-资源/
+resources/
 .DS_Store
-学习/思考.md
+study/思考.md
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
