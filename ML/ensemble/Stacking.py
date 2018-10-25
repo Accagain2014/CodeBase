@@ -15,8 +15,7 @@
 import pandas as pd
 import numpy as np
 import os
-from sklearn.datasets import load_svmlight_files, load_svmlight_file, dump_svmlight_file
-
+from sklearn.datasets import load_svmlight_files
 
 '''
 	加载数据
@@ -81,7 +80,8 @@ print 'Handle done.'
 import sys
 sys.path.append('util')
 
-import tools
+from system import tools
+
 reload(tools)
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
@@ -195,7 +195,7 @@ for one_fold in folds:
     for one in fes:
         temp_valid[one] /= len(folds)*1.0
     layer_2_valid['fold'+str(one_fold)] = model2.predict_proba(layer_2_valid[fes].as_matrix())[:, 0]
-    tools.calculate(layer_2_valid, 1254, by='fold'+str(one_fold))
+    tools.calculate(layer_2_valid, 1254, by='fold' + str(one_fold))
 
     print '******'*10 + '\n\n'
 

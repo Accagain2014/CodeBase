@@ -1,6 +1,6 @@
 #coding=utf-8
 from examples.NB_CL_Case.config import GlobalConfig as GC
-from tools import Tools
+from system.tools import Tools
 
 
 class NaiveBayes(object):

@@ -1,7 +1,7 @@
 #coding=utf-8
-from algorithms import NaiveBayes as NB
+from ML.algorithms import NaiveBayes as NB
 from examples.NB_CL_Case import ChowLiu as CL
-from tools.plot import plotTools
+from system.tools.plot import plotTools
 
 
 def testNB():
