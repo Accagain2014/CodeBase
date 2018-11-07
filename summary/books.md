@@ -97,6 +97,9 @@
 ## 计算机基础
 - [《计算机网络 自顶向下方法》](https://book.douban.com/subject/26176870/) [美] James F.Kurose / [美] Keith W.Ross 
     - [计算机网络]
+- [UNIX环境高级编程（第3版）](https://book.douban.com/subject/25900403/)  史蒂文斯 (W.Richard Stevens) / 拉戈 (Stephen A.Rago) 
+    - [英文版](http://www.codeman.net/wp-content/uploads/2014/04/APUE-3rd.pdf)
+    
 
 ## 机器学习应用
 - 《Mining of Massive Datasets》MMDS [美] Anand Rajaraman / Jeffrey David Ullman 

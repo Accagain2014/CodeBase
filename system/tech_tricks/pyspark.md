@@ -4,7 +4,7 @@
         - 控制excutor的
     - PYSPARK_DRIVER_PYTHON
         - 控制driver的
-    - spark.pyspark.driver.python
+    - spark.pyspark.driver.python 优先级比PYSPARK_DRIVER_PYTHON高
         Python binary executable to use for PySpark in driver. (default is spark.pyspark.python)
     - spark.pyspark.python	
         Python binary executable to use for PySpark in both driver and executors.

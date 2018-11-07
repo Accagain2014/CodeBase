@@ -10,10 +10,10 @@
 
 import argparse
 
-parser = argparse.ArgumentParser()
 parser = argparse.ArgumentParser(description="Args Summary Explanation.")
 
 parser.add_argument('-knn', type=argparse.FileType('r'), default=None)
 parser.add_argument('-id_title', type=argparse.FileType('r'), default=None)
 parser.add_argument('-output', type=argparse.FileType('w'), default=sys.stdout)
+
 args = parser.parse_args()
