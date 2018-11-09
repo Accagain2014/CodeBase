@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 #coding=utf-8
 
-# @Author:  Chen Maosen
-# @Email:   chenmaosen@360.cn
 # @Date:    2018/11/07 10:19
 # @File:    send_email.py
 
 # @Content:
 
+# python -m SimpleHTTPServer python 搭建文件服务器
 
 import smtplib
 

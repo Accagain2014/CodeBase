@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 #coding=utf-8
 
-# @Author:  Chen Maosen
-# @Email:   chenmaosen@360.cn
+# @Author:
+# @Email:
 # @Date:    2018/10/22 15:58
 # @File:    args.py
 
@@ -17,3 +17,14 @@ parser.add_argument('-id_title', type=argparse.FileType('r'), default=None)
 parser.add_argument('-output', type=argparse.FileType('w'), default=sys.stdout)
 
 args = parser.parse_args()
+
+
+arg_parser = argparse.ArgumentParser(description="svideo_log_stat")
+arg_parser.add_argument("--log_mapper", action="store_true",
+                        help="Extract necessary info from video_feedback log")
+arg_parser.add_argument("--log_reducer", action="store_true",
+                        help="Extract necessary info from video_feedback log")
+
+arg_parser.add_argument("--today", type=str, default=None,
+                        help="")
+
