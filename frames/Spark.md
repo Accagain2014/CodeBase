@@ -28,6 +28,14 @@
             - count/collect/save
         - persist
 
+## API
+    - DataFrame = a Dataset of Row types
+    - Dataset
+        - DataFrameStatFunctions
+        - DataFrameNaFunctions
+    - Column Methods
+    - org.apache.spark.sql.functions
+        - lit: converts a type in another language to its corresponding Spark representation.
 
 ## SparkSQL
 - 特点
