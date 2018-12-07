@@ -19,6 +19,12 @@ def test_gather():
     input = tf.constant([range(5),
                      np.array(range(5))+1,
                     np.array(range(5))+2])
+    '''
+        input = [ [0, 1, 2, 3, 4],
+                  [1, 2, 3, 4, 5],
+                  [2, 3, 4, 5, 6]
+                ]
+    '''
 
     result_matrix = tf.gather(input, [[1, 2], [0, 1]])  # 先获取[1, 2]和[0, 1]的结果，然后再整体带入后面的矩阵中
     '''
@@ -67,7 +73,17 @@ def test_matmul():
     print sess.run(input_4d_z)
     print tf.shape(input_4d_z)
 
+def test_tile():
+    '''
+
+    :return:
+    '''
+    T, N = 4, 3
+    out = tf.tile(tf.expand_dims(tf.range(T), 0), [N, 1])
+    sess = tf.Session()
+    print sess.run(out)
 
 if __name__ == '__main__':
     # test_gather()
-    test_matmul()
+    # test_matmul()
+    test_tile()

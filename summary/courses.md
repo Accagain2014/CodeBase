@@ -27,6 +27,13 @@
 - Data Minning
     - [stanford CS246 Mining Massive Data Sets](http://web.stanford.edu/class/cs246/handouts.html)
 
+- Deep learning for NLP
+    - [Stanford CS 20: Tensorflow for Deep Learning Research](http://web.stanford.edu/class/cs20si/)
+        - [Videos](https://www.youtube.com/playlist?list=PLIDllPt3EQZoS8gCP3cw273Cq9puuPLTg)
+    - [CS224n: Natural Language Processing with Deep Learning](http://web.stanford.edu/class/cs224n/)
+        - [Videos]()
+    
+
 ## 分布式
 - [mit 6.824](https://pdos.csail.mit.edu/6.824/schedule.html)
     - 分布式系统经典课程
