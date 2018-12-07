@@ -23,7 +23,7 @@
 
 - 矩阵运算
     - tf.matmul(A, B)
-        - A, B的最后两维保证矩阵乘法可以进行，高维保持形状一样，A[a1, a2, ..., an] * B[a1, a2, ..., an, bn] = C[a1, a2, ..., an-1, bn]
+        - A, B的最后两维保证矩阵乘法可以进行，高维保持形状一样，最后一维更改，A[a1, a2, ..., an] * B[a1, a2, ..., an, bn] = C[a1, a2, ..., an-1, bn]
 
 - 集成层
     - tf.layers.dense(inputs, units)

@@ -9,3 +9,10 @@
         - describe()
     - 频率统计
         - value_counts()
+            - 只能统计列
+
+## 设置
+    - 设置浮点数输出，保留三位小数
+        - pd.options.display.float_format = '{:.3f}'.format
+    
+        
