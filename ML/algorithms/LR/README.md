@@ -15,4 +15,6 @@
     - 交叉熵和逻辑回归的关系
     - logistic loss is sometimes called cross-entropy loss
     
-6. 
+6. softmax regression generalizes logistic regression to C classes.
+> L(y^, y) = sum(y * log(y^_i)) (i = 1, ... C classes) <br/>
+logist regression: L(y^, y) = y log(y^) + (1-y) log(1-y^) 

@@ -1,3 +1,7 @@
+Why Tensorflow?
+> **Flexibility[for research] + Scalability[for production]**  
+> For a framework to be useful in production, it needs to be efficient, scalable, and maintainable. For research, the framework needs to have flexible operations that can be combined in novel ways. Alternative frameworks are either flexible enough for research but less scalable, such as Chainer and PyTorch, or scalable but less flexible, such as Caffe and MXNet. TensorFlow are both flexible and scalable, allowing users to streamline from research into production.
+
 以矩阵的方式理解函数：
 
 - 基本思想
