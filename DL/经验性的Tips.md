@@ -1,4 +1,4 @@
-权重初始化
+1. 权重初始化
 - Xavier
     - W[l] = sqrt(1./layers_dims[l-1])
     
@@ -13,13 +13,13 @@
     - tanh和sigmoid的导数约等于0, 很慢
     
     
-正则化
+2. 正则化
 - L2
     - L2-regularization relies on the assumption that a model with small weights is simpler than a model with large weights.
     - L2 regularization makes your decision boundary smoother. If  λλ  is too large, it is also possible to "oversmooth", resulting in a model with high bias.
     - Weights end up smaller ("weight decay"): Weights are pushed to smaller values.
     
-Dropout
+3. Dropout
 - With dropout, your neurons thus become less sensitive to the activation of one other specific neuron, because that other neuron might be shut down at any time.
 - Steps
     - A[l] = A[l] * D[l]
@@ -28,28 +28,28 @@ Dropout
         - This technique is also called **inverted dropout**.
 - You should use dropout (randomly eliminate nodes) only in training.
 
-Minibatch
+4. Minibatch
 - Make sure your mini-batch fit for you CPU/GPU memory
 - 64, 128, 256, 512, 2^i
 
-batch gradient descent 
+5. batch gradient descent 
 - cost difference between mini-batch and batch gradient descent. 
 - ![](../images/diff_batch_mini_batch_gd.jpg)
 - 当样本很多时，很慢
 
 
-stachostic gradient descent
+6. stachostic gradient descent
 - mini-batch size = 1
 
 
-epoch
+7. epoch
 - a single pass through the training set.
 
-step
+8. step
 - a single pass through one mini-batch
 
 
-**Exponentially weighted average**
+9. **Exponentially weighted average**
 Vt = a Vt-1 + (1-a) Lt
 - 计算多变量的平均值
 - Vt 指当天的温度，Vt-1前一天的温度， Lt表示当天的温度变化
@@ -58,11 +58,20 @@ Vt = a Vt-1 + (1-a) Lt
 - ![](../images/exp_weight_decay.jpg)
 
 
-调参方法
+10. 调参方法
 - 随机 -> 挑选表现好周围范围 -> 再随机
 
-batch normalization
+11. batch normalization
 - before activate function
 - shape = (n_l, 1)
+- e_l, u_l
+
+
+12. 模型内存不足
+- Gradient accumulation
+    - The samples in a minibatch are typically independent with respect to gradient computation (excluding batch normalization, which is not used here). This means that the gradients of multiple smaller minibatches can be accumulated before performing the weight update, and this will be exactly equivalent to a single larger update.
+- Gradient checkpointing
+    - The major use of GPU/TPU memory during DNN training is caching the intermediate activations in the forward pass that are necessary for efficient computation in the backward pass. "Gradient checkpointing" trades memory for compute time by re-computing the activations in an intelligent way.
+    
 
     

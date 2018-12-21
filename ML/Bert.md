@@ -25,8 +25,9 @@ Related Papers.
 
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf)
    - 2018 . Google.
-   - (tensorflow version)[https://github.com/google-research/bert]
+   - (tensorflow version, but GPU training is single-GPU only.)[https://github.com/google-research/bert]
    - 双向transformer + finetune
+
 
 - Transfer Learning [迁移学习]
     - [cs 231n Transfer Learning](http://cs231n.github.io/transfer-learning/)
@@ -34,6 +35,7 @@ Related Papers.
     - Language model pre-training
         - feature-based. eg: ELMo (Peters et al. 2018)
         - fine-tuning. eg: OpenAI GPT(Generative Pre-trained Transformer) (Radford et al. 2018)
+        - ULMFit
     
 
 
@@ -42,14 +44,29 @@ Related Papers.
     - [glue-benchmark](https://gluebenchmark.com/leaderboard)
 
 
+## 基本思想
+- pretrain
+    - BERT was trained using only a plain text corpus, which is important because an enormous amount of plain text data is publicly available on the web in many languages.
+- bidirectional
+    - BERT represents "bank" using both its left and right context — I made a ... deposit — starting from the very bottom of a deep neural network, so it is deeply bidirectional.
+- with almost no task-specific network architecture modifications 
     
 - MLM
 
 - WordPiece tokenization
 
+## pretrain
+- datasets
+    - Wikipedia + BookCorpus
+    - [Glue Tasks Data](https://gluebenchmark.com/tasks)
+    - [Gutenberg Dataset](https://web.eecs.umich.edu/~lahiri/gutenberg_dataset.html)
+    
 
-## squad
+
+## Squad
 - 2.0 [Know What You Don’t Know: Unanswerable Questions for SQuAD](https://arxiv.org/pdf/1806.03822.pdf)
+- [Course Project Reports for CS224N 2018, 每年上半年开](http://web.stanford.edu/class/cs224n/reports.html)
+
 
 
 ## Terms
