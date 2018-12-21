@@ -66,3 +66,17 @@ batch normalization
 - shape = (n_l, 1)
 
     
+误差分析
+- human level error
+    - human level performance, as a proxy for Bayes error
+- train error
+    - the gap or diff (train error, human level error) = avoidable bias
+    - 当avoidable bias大时，focus on 训练大网络，train error还能提高很多
+    - bias = the gap or diff (train error, 0) 
+- dev error 
+    - the gap or diff (dev error, train error) = variance 
+    
+- train-dev error
+    - tht gap bettween train-dev error and dev error = judge mismatch problem
+
+    
