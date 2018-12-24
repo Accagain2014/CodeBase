@@ -3,6 +3,8 @@ Build own **Code Base** and **Thinking Base** from daily work and study.
 ## ML
 - Implement frequent used machine learning algorithms.
 
+## DL
+- DL tips
 
 ## system
 - Machine Learning Algorithms on Big Data Frames.

@@ -81,11 +81,11 @@ Vt = a Vt-1 + (1-a) Lt
 - train error
     - the gap or diff (train error, human level error) = avoidable bias
     - 当avoidable bias大时，focus on 训练大网络，train error还能提高很多
-    - bias = the gap or diff (train error, 0) 
+    - **bias problem** = the gap or diff (train error, human level error) 
 - dev error 
-    - the gap or diff (dev error, train error) = variance 
+    - the gap or diff (dev error, train error) = **variance problem**
     
 - train-dev error
-    - tht gap bettween train-dev error and dev error = judge mismatch problem
+    - tht gap bettween train-dev error and dev error = **judge mismatch problem**
 
     

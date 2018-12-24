@@ -32,7 +32,7 @@
         - [Videos](https://www.youtube.com/playlist?list=PLIDllPt3EQZoS8gCP3cw273Cq9puuPLTg)
     - [CS224n: Natural Language Processing with Deep Learning](http://web.stanford.edu/class/cs224n/)
         - [Videos]()
-    
+    - [A funny course by kaggler. Practical Deep Learning For Coders](https://course.fast.ai/index.html)
 
 ## 分布式
 - [mit 6.824](https://pdos.csail.mit.edu/6.824/schedule.html)

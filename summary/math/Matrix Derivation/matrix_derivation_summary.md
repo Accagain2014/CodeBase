@@ -1,4 +1,5 @@
 ## 资料
+- [The Matrix Calculus You Need For Deep Learning](https://arxiv.org/pdf/1802.01528v2.pdf)
 - [知乎：矩阵求导术（上）](https://zhuanlan.zhihu.com/p/24709748)
 - [维基：微分](https://zh.wikipedia.org/wiki/%E5%BE%AE%E5%88%86)
 - [维基：克罗内克积](https://zh.wikipedia.org/wiki/%E5%85%8B%E7%BD%97%E5%86%85%E5%85%8B%E7%A7%AF)
