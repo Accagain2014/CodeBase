@@ -10,9 +10,19 @@
     - 频率统计
         - value_counts()
             - 只能统计列
+            - 一次性统计所有行 df = df.apply(lambda x: pd.Series.value_counts(x).sort_index())
+
+## 构造
+    - from_dict
+        - 
 
 ## 设置
     - 设置浮点数输出，保留三位小数
         - pd.options.display.float_format = '{:.3f}'.format
-    
+    - 设置columns输出的最多个数
+        - pandas.set_option('display.max_columns', None)
         
+  
+        
+        
+       

@@ -59,16 +59,28 @@ def _seg(x):
     return max(1.0, math.floor(x))
 
 
-def show(ax, save_path=None):
+def show(ax, save_path=None, set_h=None):
+    '''
+
+    :param ax:
+    :param save_path:
+    :param set_h: [(y1, color1), (y2, color2), ...]
+    :return:
+    '''
     for p in ax.patches:
         hi = float(p.get_height())
         if hi >= 1:
             hi = int(hi)
-        ax.annotate(str(hi), (p.get_x() * .99, p.get_height() * 1.0))
+        ax.annotate(str(hi), (p.get_x() , p.get_height() * 1.0), fontSize="x-small")
     if not save_path is None:
         plt.savefig(save_path)
-    #plt.show()
+    if set_h:
+        for one_horizon_line in set_h:
+            ax.axhline(y=one_horizon_line[0], color=one_horizon_line[1])
+
+    plt.show()
     plt.close()
+
 
 def sort_by(df, columns=[], ascending=[], out_columns=None):
     sort_result = df.sort_values(by=columns, ascending=ascending)

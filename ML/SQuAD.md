@@ -22,7 +22,25 @@
         - 对于无答案的错误回答，有一半是伪答案。【人和机器都是如此】
     - ![](../images/SQuAD2.png)
     - ![SQuAD1.1和SQuAD2模型比较](../images/SQuAD1_2.png)
-    
+    - ![SQuAD2.0 bad case](../images/squad2.0_bad_cases.png)
+```
+Dev No ans, 没有plausible answer  
+5ad24ce8d7d075001a428c0e
+5ad24ce8d7d075001a428c0f
+5ad24de6d7d075001a428c33
+5ad245f9d7d075001a428ac1
+5ad2456dd7d075001a428aa3
+5ad258b4d7d075001a428ddb
+5ad258b4d7d075001a428ddc
+5ad258b4d7d075001a428ddd
+5ad24eb1d7d075001a428c64
+5ad252e6d7d075001a428d0c
+5ad25bf3d7d075001a428e96
+5ad25d05d7d075001a428ed3
+5ad25e70d7d075001a428f1c
+5ad26000d7d075001a428fb0
+5ad265efd7d075001a4291d2
+```    
     
 | Model | SQuAD 1.1 F1 | SQuAD 2.0 F1 |
 | :-----: | :-----: | :-----: |
@@ -65,4 +83,5 @@ http://www.parl.ai/static/docs/tasks.html#
 |数据集| 描述 | 可用于 | 总样本数 | 正样本数 | 负样本数 | 链接 | 
 | :-----: | :-----: | :-----:| :-----: | :-----: | :-----: | :-----: |
 | Quora | 给定两个问题，是否描述一个含义 | pretrain |  404362 | 149306 | 255045 | https://www.kaggle.com/quora/question-pairs-dataset |
+
 
