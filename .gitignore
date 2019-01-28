@@ -5,6 +5,7 @@ test.py
 resources/
 .DS_Store
 study/思考.md
+nohup.out
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -78,6 +78,10 @@
 - Span Prediction Ensemble
 
 
+## Dark Knowledge
+- ensemble后的结果(logits)作为回归对象，加上原本的0/1分类loss, 两个loss一起
+- 
+
 ## Examples
 ![](../../images/ensemble_example.png)
 
