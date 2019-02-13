@@ -6,6 +6,7 @@ Related Papers.
     - [tensor2tensor library](https://github.com/tensorflow/tensor2tensor)
     - [易懂的Kyubyong/transformer](https://github.com/Kyubyong/transformer)
     - 只依赖Attention的网络, 不依靠RNN和CNN。并行化更高，训练时间短。
+    - [可视化transformer](https://jalammar.github.io/illustrated-transformer/)
     
    
 - [Semi-supervised Sequence Learning](https://arxiv.org/abs/1511.01432)
@@ -66,7 +67,7 @@ Related Papers.
 ## Squad
 - 2.0 [Know What You Don’t Know: Unanswerable Questions for SQuAD](https://arxiv.org/pdf/1806.03822.pdf)
 - [Course Project Reports for CS224N 2018, 每年上半年开](http://web.stanford.edu/class/cs224n/reports.html)
-
+- [BERT + Synthetic Self-Training (Google AI Language)](../docs/NLP/BERT.pdf)
 
 
 ## Terms
