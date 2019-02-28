@@ -1,6 +1,6 @@
 Related Papers. 
 ----
-- [Attention Is All You Need](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)
+- [1. Attention Is All You Need](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)
     - 2017 NIPS. BERT之前， Transformer. Google Brain.
     - [The Annotated Transformer](http://nlp.seas.harvard.edu/2018/04/03/attention.html)
     - [tensor2tensor library](https://github.com/tensorflow/tensor2tensor)
@@ -9,7 +9,7 @@ Related Papers.
     - [可视化transformer](https://jalammar.github.io/illustrated-transformer/)
     
    
-- [Semi-supervised Sequence Learning](https://arxiv.org/abs/1511.01432)
+- [2. Semi-supervised Sequence Learning](https://arxiv.org/abs/1511.01432)
     - 2015 NIPS. Andrew M. Dai, Quoc V. Le. Google.
     - 利用未标注的数据进行预训，提高文本分类的能力
     - 怎样利用未标注的数据？ pretrain
@@ -18,17 +18,32 @@ Related Papers.
     - 利用未标注数据学习到的权重，给监督学习算法初始化参数
     
     
-- [Improving Language Understanding by Generative Pre-Training](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)
+- [3. Improving Language Understanding by Generative Pre-Training](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)
     - OpenAI GPT (Radford et al., 2018)
     - [blog](https://blog.openai.com/language-unsupervised/)
     - [code](https://github.com/openai/finetune-transformer-lm)
     
 
-- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf)
+- [4. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf)
    - 2018 . Google.
    - (tensorflow version, but GPU training is single-GPU only.)[https://github.com/google-research/bert]
    - 双向transformer + finetune
 
+- [5. Language Models are Unsupervised Multitask Learners](https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf)
+    - 2019 OpenAI GPT-2.0. 
+    - Dateset: WebText. 更大数据和更大网络，LM评价上超过了大部分STOA, 尝试在不需要监督数据的情况下，对下游任务进行预测，超过了很多baseline.
+    - [openAI blog](https://blog.openai.com/better-language-models/)
+    - [117M model and code](https://github.com/openai/gpt-2)
+    - 问题：repetitive text, world modeling failures[常识错误], unnatural topic switching;
+    - “zero-shot” setting: Our model is not trained on any of the data specific to any of these tasks and is only evaluated on them as a final test
+    - not releasing the dataset, training code, or GPT-2 model weights.
+    
+- [6. Multi-Task Deep Neural Networks for Natural Language Understanding](https://arxiv.org/pdf/1901.11504.pdf)
+    - 2019 MSRA, MULTI-TASK DNN.
+    - Zero-shot, BPM输入, 数据质量更好+数据更多+网络更深
+    - [张俊林, 效果惊人的GPT 2.0模型：它告诉了我们什么](https://zhuanlan.zhihu.com/p/56865533)
+    
+    
 
 - Transfer Learning [迁移学习]
     - [cs 231n Transfer Learning](http://cs231n.github.io/transfer-learning/)

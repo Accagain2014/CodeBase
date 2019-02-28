@@ -57,3 +57,29 @@ array([[1, 1, 1, 0, 0],
     
     用两个sequence_mask可以解决
 ```
+
+4. 给定一个两个矩阵，一个是logits = [batch_size, num_pos+num_neg],
+    另一个是labels = [batch_size, num_pos+num_neg], 其中0表示该样本是正例, 1表示该样本是负例
+    计算rank_loss, 对每一个样本的正例，随机5个作为负样例, 然后计算max(0, log_neg - log_pos + margin)
+```
+例如：
+    logits = [
+        [0.9, 0.2, 0.3],
+        [0.4, 0.1, 0.5]
+    ]
+    lables = [
+        [1, 1, 0],
+        [1, 0, 0]
+    ]
+    
+    res = max(0, random([0.3]) - 0.9 + margin) + max(0, random([0.3]) - 0.2 + margin)
+          + max(0, random([0.1, 0.5]) - 0.4 + margin)
+    
+    妥协方案：
+        先随机开始位置, 然后随机长度[0, 10]
+        
+```
+
+5. 索引. 给定input = [batch_size, n1, n2], indices = [batch_size, n1, k], 对最后一维进行索引.
+    - 采用tf.gather_nd, 通过构造indices.
+    - 

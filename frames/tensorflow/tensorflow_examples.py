@@ -26,7 +26,7 @@ def test_gather():
                 ]
     '''
 
-    result_matrix = tf.gather(input, [[1, 2], [0, 1]])  # 先获取[1, 2]和[0, 1]的结果，然后再整体带入后面的矩阵中
+    result_matrix = tf.gather(input, [[1, 2], [0, 1]], axis=0)  # 先获取[1, 2]和[0, 1]的结果，然后再整体带入后面的矩阵中
     '''
         tf.gather(matrix, [1, 2])的结果记为matrix1 [[1, 2, 3, 4, 5], [2, 3, 4, 5, 6]],
         tf.gather(matrix, [0, 1])的结果记为matrix2 [[0, 1, 2, 3, 4], [1, 2, 3, 4, 5]],
@@ -35,6 +35,7 @@ def test_gather():
 
     result_scalar = tf.gather(input, 0)
     result_vector = tf.gather(input, [1, 2, 1])
+    result_multidims_matrix = tf.gather(input, [[[1, 2]], [[0, 1]]], axis=1)
 
     sess = tf.Session()
 
@@ -43,6 +44,8 @@ def test_gather():
     print sess.run(result_vector)
     print '***'*10
     print sess.run(result_matrix)
+    print '***'*10
+    print sess.run(result_multidims_matrix)
 
 def test_matmul():
     '''
@@ -198,6 +201,28 @@ def get_position_cross_clf_label(positions, seq_length, ans_avg_len):
   return start_labels * ans_avg_len + ans_len - 1
 
 
+def metric():
+
+    tf.metrics.accuracy(tf.ones_like(), ground_truth)
+
+
+def test_boolean_mask():
+    # 它会自动补充
+    input = tf.constant([
+        [0.99, 0.8, 0.7, 0.5, 0.5],
+        [0.2, 0.3, 0.6, 0.7, 0.8],
+        [0.1, 0.1, 0.1, 0.5, 1]
+    ])
+
+    mask = tf.constant([
+        [1, 0, 0, 1, 0],
+        [1, 1, 1, 1, 1],
+        [0, 0, 0, 0, 0]
+    ])
+
+    sess = tf.Session()
+    print(sess.run(tf.boolean_mask(input, mask)))
+
 
 def test():
     a = np.array([
@@ -237,4 +262,6 @@ if __name__ == '__main__':
     # sovle_problem_1()
     # solve_problem_2()
     # losses()
-    test()
+    #test()
+    test_boolean_mask()
+    test_gather()
