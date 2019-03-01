@@ -38,7 +38,9 @@ def solve_problems_4(rand_neg_num=2, max_ans_len=2, max_seq_len=3, margin=0.01):
     expand_lables = tf.tile(tf.expand_dims(lables, -1), [1, 1, rand_neg_num])
     expand_logits = tf.tile(tf.expand_dims(logits, -1), [1, 1, rand_neg_num])
     pos_logits = expand_logits * tf.cast(expand_lables, tf.float32)
-    neg_logits = neg_logits * tf.cast(expand_lables, tf.float32)
+    neg_logits = neg_logits * tf.cast(expand_lables, tf.float32) + tf.cast(1 - expand_lables, tf.float32) * -margin
+
+    temp = neg_logits - pos_logits + margin
 
     loss = tf.reduce_sum(tf.maximum(0.0, neg_logits - pos_logits + margin)) / tf.cast(batch_size, tf.float32)
 
@@ -52,7 +54,8 @@ def solve_problems_4(rand_neg_num=2, max_ans_len=2, max_seq_len=3, margin=0.01):
     # print(sess.run(random_neg_indices_org))
     # print(sess.run(tf.concat([now_indices, random_neg_indices_org], axis=-1)))
     # print(sess.run(random_neg_indices))
-    print(sess.run(loss))
+    #print(sess.run(loss))
+    print(sess.run(temp))
     #print(sess.run(expand_lables))
 
 
@@ -66,11 +69,65 @@ def test_concat():
     print(sess.run(ab2))
 
 
+def solve_problem_6(topk=3):
+    '''
+        logits = [
+            [0.9, 0.2, 0.3],
+            [0.4, 0.1, 0.5]
+        ]
+        lables = [
+            [1, 1, 0],
+            [1, 0, 0]
+        ]
+    top_1_recall = (1/2 + 0)/2 = 0.15, top_2_recall = (1/2 + 1/1)/2 = 0.75, top_3_recall = (2/2 + 1/1)/2 = 1
+    top_1_precise = (1/1 + 0/1)/2 = 0.5, top_2_precise = (1/2 + 1/2)/2 = 0.5 top_3_precise = (2/3 + 1/3)/2 = 0.5
+    '''
+
+    logits = tf.constant([
+        [0.9, 0.2, 0.3],
+        [0.4, 0.1, 0.5]
+    ])
+    lables = tf.constant([
+        [1, 1, 0],
+        [1, 0, 0]
+    ])
+
+    valuese, indices = tf.nn.top_k(logits, topk)
+    batch_size = tf.shape(logits)[0]
+
+    now_indices = tf.expand_dims(
+        tf.tile(tf.expand_dims(tf.range(batch_size), -1), [1, topk]), -1)
+    indices = tf.expand_dims(indices[:, :topk], -1)
+
+
+    now_indices = tf.concat([now_indices, indices], -1)
+    top_labels = tf.gather_nd(lables, now_indices)
+
+    init = tf.initialize_all_variables()
+    sess = tf.Session()
+    sess.run(init)
+
+    precise = tf.metrics.accuracy(top_labels, tf.ones_like(top_labels))
+    tf.identity(precise[1], name="temp")
+
+    # neg_logits = tf.gather_nd(logits, random_neg_indices)  # 通过gather_nd构造索引
+    # neg_logits = tf.reshape(neg_logits, [batch_size, max_ans_len * max_seq_len, -1])
+
+
+    # for topi in range(1, topk+1):
+    #
+    init = tf.initialize_all_variables()
+    sess = tf.Session()
+    sess.run(init)
+
+    print(sess.run(precise[1]))
+
+
+
 if __name__ == '__main__':
-    solve_problems_4()
+    #solve_problems_4()
+    solve_problem_6()
     #test_concat()
-
-
 
 
 
