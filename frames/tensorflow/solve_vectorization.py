@@ -69,6 +69,7 @@ def test_concat():
     print(sess.run(ab2))
 
 
+
 def solve_problem_6(topk=3):
     '''
         logits = [
@@ -92,36 +93,31 @@ def solve_problem_6(topk=3):
         [1, 0, 0]
     ])
 
-    valuese, indices = tf.nn.top_k(logits, topk)
     batch_size = tf.shape(logits)[0]
+    label_num = tf.shape(logits)[1]
+    valuese, indices = tf.nn.top_k(logits, label_num)
+
 
     now_indices = tf.expand_dims(
-        tf.tile(tf.expand_dims(tf.range(batch_size), -1), [1, topk]), -1)
-    indices = tf.expand_dims(indices[:, :topk], -1)
-
+        tf.tile(tf.expand_dims(tf.range(batch_size), -1), [1, label_num]), -1)
+    indices = tf.expand_dims(indices, -1)
 
     now_indices = tf.concat([now_indices, indices], -1)
     top_labels = tf.gather_nd(lables, now_indices)
 
-    init = tf.initialize_all_variables()
-    sess = tf.Session()
-    sess.run(init)
-
-    precise = tf.metrics.accuracy(top_labels, tf.ones_like(top_labels))
-    tf.identity(precise[1], name="temp")
-
-    # neg_logits = tf.gather_nd(logits, random_neg_indices)  # 通过gather_nd构造索引
-    # neg_logits = tf.reshape(neg_logits, [batch_size, max_ans_len * max_seq_len, -1])
+    for topi in range(1, topk+1):
+        precise = tf.metrics.accuracy(top_labels[:, :topi], tf.ones_like(top_labels[:, :topi]))
+        recall = tf.metrics.recall(top_labels, tf.concat(
+            [top_labels[:, :topi], tf.zeros([batch_size, label_num - topi], dtype=tf.int32)], axis=-1))
 
 
-    # for topi in range(1, topk+1):
-    #
-    init = tf.initialize_all_variables()
-    sess = tf.Session()
-    sess.run(init)
+    with tf.Session() as sess:
+        init = tf.group(tf.global_variables_initializer(), tf.local_variables_initializer())
+        sess.run(init)
 
-    print(sess.run(precise[1]))
 
+        print(sess.run(precise[1]))
+        print(sess.run(recall[1]))
 
 
 if __name__ == '__main__':
