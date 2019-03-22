@@ -37,11 +37,13 @@ Related Papers.
     - 问题：repetitive text, world modeling failures[常识错误], unnatural topic switching;
     - “zero-shot” setting: Our model is not trained on any of the data specific to any of these tasks and is only evaluated on them as a final test
     - not releasing the dataset, training code, or GPT-2 model weights.
+    - Zero-shot, BPM输入, 数据质量更好+数据更多+网络更深
+    - [张俊林, 效果惊人的GPT 2.0模型：它告诉了我们什么](https://zhuanlan.zhihu.com/p/56865533)
     
 - [6. Multi-Task Deep Neural Networks for Natural Language Understanding](https://arxiv.org/pdf/1901.11504.pdf)
     - 2019 MSRA, MULTI-TASK DNN.
-    - Zero-shot, BPM输入, 数据质量更好+数据更多+网络更深
-    - [张俊林, 效果惊人的GPT 2.0模型：它告诉了我们什么](https://zhuanlan.zhihu.com/p/56865533)
+    - 
+    
     
     
 

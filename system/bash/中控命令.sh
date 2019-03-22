@@ -10,6 +10,5 @@ done
 # eg sh command.sh 19 34 'echo export PATH=/home/ada/chenmaosen/phantomjs-1.9.7-linux-x86_64/bin:/home/ada/chenmaosen/python3/bin:\$PATH >> ~/.bashrc ; source ~/.bashrc'
 
 # 杀死包含phantomjs的所有进程
-#   kill -9 `ps -aux | grep phantomjs | awk '{split($0,numbers," "); print numbers[2]}'`
-#   killall phantomjs
-#   sh command.sh 19 34 "kill -9 `ps -aux | grep phantomjs | awk '{split($0,numbers,\" \"); print numbers[2]}'`"
+
+ps aux | grep $process_name | awk "{system(\" kill -9 \" \$2)}"

@@ -18,8 +18,6 @@ Why Tensorflow?
         - 当axis为非0时，理解有点问题, 再看一看
     - tf.gather_nd  
         - 按照indices[-1]值, 对params从第0维开始, 依次向里索引, 然后再包上indices[0: -1]维度
-    
-    
     - tf.stack
     - tf.concat
         - 对指定的axis进行拼接

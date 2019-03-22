@@ -254,6 +254,23 @@ def test():
     sess = tf.Session()
     print(sess.run(output))
 
+def test_functions():
+    a = np.array([
+        np.array(range(5)) + 0.0,
+        np.array(range(5)) + 1.0,
+        np.array(range(5)) + 2.0,
+        np.array(range(5)) + 3.0,
+        np.array(range(5)) + 4.0
+
+    ])
+
+    a = tf.constant(a)
+
+    sess = tf.Session()
+    print(a.shape.ndims)
+    print(a.shape.as_list())
+    print(sess.run(tf.shape(a)))
+
 if __name__ == '__main__':
     # test_gather()
     #test_matmul()
@@ -262,6 +279,7 @@ if __name__ == '__main__':
     # sovle_problem_1()
     # solve_problem_2()
     # losses()
-    #test()
-    test_boolean_mask()
-    test_gather()
+    # test()
+    # test_boolean_mask()
+    # test_gather()
+    test_functions()

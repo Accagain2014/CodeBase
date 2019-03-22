@@ -114,8 +114,6 @@ def solve_problem_6(topk=3):
     with tf.Session() as sess:
         init = tf.group(tf.global_variables_initializer(), tf.local_variables_initializer())
         sess.run(init)
-
-
         print(sess.run(precise[1]))
         print(sess.run(recall[1]))
 
