@@ -36,10 +36,10 @@
     - refers to a programming pattern when you defer declaring/initializing an object until it is loaded.
     - In the context of TensorFlow, it means you defer creating an op until you need to compute it.
     - separate the definition of ops and their execution
-    - ![](../../images/tf/laza_load.jpg)
-    - ![](../../images/tf/norm_load.jpg)
+    - ![](../../../images/tf/laza_load.jpg)
+    - ![](../../../images/tf/norm_load.jpg)
     
-- feed_dict
+- feed_dict & placeholder 
     - When you have a large graph and just want to test out certain parts, you can provide dummy values so TensorFlow won't waste time doing unnecessary computations.
     - 当图很大时，可以直接给后面变量赋值，直接测试要测试的部分
     
