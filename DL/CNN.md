@@ -35,3 +35,25 @@ Why Padding?
 
 ![](../images/cnn_advantage.jpg)
 
+
+## Classic CNN Papers
+- LeNets. 1998. Gradient-based learning applied to document recognition. LeCun. 
+    - 60000 parameters.
+- AlexNets. 2012. ImageNet classification with deep convolutional neural networks.
+    - 60 million parameters.
+    - Local Response Normalization(LRN).
+- VGG-16. 2015. Very deep convolutional networks for large-scale image recognition.
+    - channel * 2, nh & hw / 2, 很规整.
+    - 16 weight layers.
+- ResNets. 2015. Deep residual networks for image recognition.
+    - every tow layer, add before two layer.
+    - ![](../images/CNN/resnet.jpg)
+- 2013. Network in network.
+
+## CNN tips
+- 随着层数加深，nh, nw降低，nc增大
+- conv, pool, conv, pool, ..., fc, fc, ..., output
+- one by one conv
+    - shrinking nc
+    -  
+
