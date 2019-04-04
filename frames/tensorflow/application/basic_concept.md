@@ -14,6 +14,7 @@
 - Session
     - A Session object encapsulates the environment in which Operation objects are executed, and Tensor objects are evaluated.
     - Session will also allocate memory to store the current values of variables.
+    - Session looks at all trainable variables that loss depends on and update them.
     
 - Graph
     - why need Graph?
@@ -43,12 +44,17 @@
     - When you have a large graph and just want to test out certain parts, you can provide dummy values so TensorFlow won't waste time doing unnecessary computations.
     - 当图很大时，可以直接给后面变量赋值，直接测试要测试的部分
     
+
  
 - not just a library
     - TensorFlow
     - TensorBoard
     - Tensor Serving
 
+
 - with other frames
     - Numpy
         - NumPy supports ndarray, but doesn't offer methods to create tensor functions and automatically compute derivatives, nor GPU support. 
+    - PyTorch
+        - PyTorch’s dynamic graphs
+        
