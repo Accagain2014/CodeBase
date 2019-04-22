@@ -1,11 +1,15 @@
 # My configurations
 summary/笔记/Andrew_Neural Networks and Deep Learning/
-test.py
-.idea/
+frames/tensorflow/tutorials/
 resources/
-.DS_Store
 study/思考.md
+test.py
+
+
+.idea/
+.DS_Store
 nohup.out
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

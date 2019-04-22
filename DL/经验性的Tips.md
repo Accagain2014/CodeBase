@@ -75,7 +75,7 @@ Vt = a Vt-1 + (1-a) Lt
     
 
     
-误差分析
+13. 误差分析
 - human level error
     - human level performance, as a proxy for Bayes error
 - train error
@@ -87,5 +87,3 @@ Vt = a Vt-1 + (1-a) Lt
     
 - train-dev error
     - tht gap bettween train-dev error and dev error = **judge mismatch problem**
-
-    

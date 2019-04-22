@@ -21,6 +21,7 @@
         - pd.options.display.float_format = '{:.3f}'.format
     - 设置columns输出的最多个数
         - pandas.set_option('display.max_columns', None)
+        - pd.set_option('display.max_colwidth', -1)
         
   
         

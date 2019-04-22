@@ -15,4 +15,16 @@
     
 
 - feedable tensor
-    - 
+
+    
+- data
+    - does tf.data really perform better?
+        - speed
+            - With placeholder: 9.05271519 seconds
+            - With tf.data: 6.12285947 seconds
+        - drawbacks
+            - For prototyping, feed dict can be faster and easier to write (pythonic)
+            - tf.data is tricky to use when you have complicated preprocessing or multiple data sources
+            - NLP data is normally just a sequence of integers. In this case, transferring the data over to GPU is pretty quick, so the speedup of tf.data isn't that large
+    
+
