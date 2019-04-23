@@ -1,5 +1,6 @@
 ## Resources
 - [Stanford CS 20: Tensorflow for Deep Learning Research](https://web.stanford.edu/class/cs20si/)
+- [Kyubyong/tensorflow-exercises, equal with numpy](https://github.com/Kyubyong/tensorflow-exercises)
 - [TensorFlow’s official sample models](https://github.com/tensorflow/models)
 - [TensorFlow Tutorials](https://github.com/Hvass-Labs/TensorFlow-Tutorials)
 

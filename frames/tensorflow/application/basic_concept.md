@@ -39,11 +39,12 @@
     - separate the definition of ops and their execution
     - ![](../../../images/tf/laza_load.jpg)
     - ![](../../../images/tf/norm_load.jpg)
+    - 解决方案实现:
+        - Use Python attribute to ensure a function is only loaded the first time it’s called
     
-- feed_dict & placeholder 
-    - When you have a large graph and just want to test out certain parts, you can provide dummy values so TensorFlow won't waste time doing unnecessary computations.
-    - 当图很大时，可以直接给后面变量赋值，直接测试要测试的部分
-    
+- eager execution
+    - 
+    - PyTorch's dynamic graphs
 
  
 - not just a library

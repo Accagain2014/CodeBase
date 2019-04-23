@@ -34,7 +34,7 @@
 
 5. batch gradient descent 
 - cost difference between mini-batch and batch gradient descent. 
-- ![](../images/diff_batch_mini_batch_gd.jpg)
+- ![](../../../images/diff_batch_mini_batch_gd.jpg)
 - 当样本很多时，很慢
 
 
@@ -55,7 +55,7 @@ Vt = a Vt-1 + (1-a) Lt
 - Vt 指当天的温度，Vt-1前一天的温度， Lt表示当天的温度变化
 - 当a=0.9时， 1 / (1-a) = 10, 表示前十天的温度平均
 - 当a=0.99时，1 / (1-a) = 100, 表示前100天的平均问题
-- ![](../images/exp_weight_decay.jpg)
+- ![](../../../images/exp_weight_decay.jpg)
 
 
 10. 调参方法

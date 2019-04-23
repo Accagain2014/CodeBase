@@ -6,7 +6,8 @@
      
 ## 统计
     - 值统计
-        - describe()
+        - df.describe(include = 'all')
+        - df.series.describe()
     - 频率统计
         - value_counts()
             - 只能统计列

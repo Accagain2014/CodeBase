@@ -34,7 +34,8 @@ def calc_auc(pred, true):
     tps = np.array(tps) / tps[-1]
     return auc, tps, fps, threshold
 
+
 if __name__ == '__main__':
     pred = [0.1, 0.4, 0.35, 0.8]
     true = [0, 0, 1, 1]
-    print calc_auc(pred, true)
+    print(calc_auc(pred, true))

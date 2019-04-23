@@ -23,17 +23,17 @@ Why Padding?
     - It allows you to use a CONV layer without necessarily shrinking the height and width of the volumes. This is important for building deeper networks, since otherwise the height/width would shrink as you go to deeper layers. 
     - It helps us keep more of the information at the border of an image. Without padding, very few values at the next layer would be affected by pixels as the edges of an image.
 
-![](../images/CNN/zero_padding.jpg)
+![](../../../images/CNN/zero_padding.jpg)
 
-![](../images/CNN/stride.jpg)
+![](../../../images/CNN/stride.jpg)
 
 
     
-![](../images/cnn_size_cal.jpg)
+![](../../../images/cnn_size_cal.jpg)
 
 
 
-![](../images/cnn_advantage.jpg)
+![](../../../images/cnn_advantage.jpg)
 
 
 ## Classic CNN Papers
@@ -47,7 +47,7 @@ Why Padding?
     - 16 weight layers.
 - ResNets. 2015. Deep residual networks for image recognition.
     - every tow layer, add before two layer.
-    - ![](../images/CNN/resnet.jpg)
+    - ![](../../../images/CNN/resnet.jpg)
 - 2013. Network in network.
 
 ## CNN tips
@@ -56,4 +56,6 @@ Why Padding?
 - one by one conv
     - shrinking nc
     -  
+## Terms
+- FC: full-connected layer
 
