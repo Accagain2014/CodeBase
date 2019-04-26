@@ -13,6 +13,7 @@
 
 - Session
     - A Session object encapsulates the environment in which Operation objects are executed, and Tensor objects are evaluated.
+    - Session.run(), which hands the graph off for execution to the C++ runtime.
     - Session will also allocate memory to store the current values of variables.
     - Session looks at all trainable variables that loss depends on and update them.
     
@@ -21,11 +22,30 @@
         - Save computation. Only run subgraphs that lead to the values you want to fetch.
         - Break computation into small, differential pieces to facilitate auto-differentiation
         - Facilitate distributed computation, spread the work across multiple CPUs, GPUs, TPUs, or other devices
+    - Pros
+        - Optimizable
+            - automatic buffer reuse
+            - constant folding
+            - inter-op parallelism
+            - automatic trade-off between compute and memory
+        - Deployable
+            - the Graph is an intermediate representation for models
+        - Rewritable
+            - experiment with automatic device placement or quantization
+    - Cons
+        - Difficult to debug
+            - errors are reported long after graph construction
+            - execution cannot be debugged with pdb or print statements
+        - Un-Pythonic
+            - writing a TensorFlow program is an exercise in metaprogramming
+            - control flow (e.g., tf.while_loop) differs from Python [for 是否可行？]
+            - can't easily mix graph construction with custom data structures
 
 - ops
     - constants
     - variables
     - operators
+    
 
 - get the value of a node
     - Create a session, assign it to variable sess so we can call it later
@@ -43,9 +63,10 @@
         - Use Python attribute to ensure a function is only loaded the first time it’s called
     
 - eager execution
-    - 
     - PyTorch's dynamic graphs
-
+    - "A NumPy-like library for numerical computation with support for GPU acceleration and automatic differentiation, and a flexible platform for machine learning research and experimentation."
+    - Eager execution: Execute compositions with Python 
+    - Graph construction: Execute compositions of operations with Sessions
  
 - not just a library
     - TensorFlow

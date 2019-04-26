@@ -3,6 +3,14 @@
 Converlutions
 - N * N   Filter: F * F
 - Output: N-F+1 * N-F+1
+- Filter_nums = channel_input * channel_output, 每个filter对应一个channel(feature map)的映射, 
+    - 比如前面16 channel, 后面36 channel, filter_size 5 * 5, 每个input channel对应36个channel, 最后形成的36个channel 是将前面16个channel汇聚？
+- For each position of the filter, the dot-product is being calculated between the filter and the image pixels under the filter, which results in a single pixel in the output image.
+
+Pooling
+- pooling没有stride的概念
+- conv -> activate -> pool
+- relu(max_pool(x)) == max_pool(relu(x))
 
 
 Why Padding?
@@ -55,7 +63,8 @@ Why Padding?
 - conv, pool, conv, pool, ..., fc, fc, ..., output
 - one by one conv
     - shrinking nc
-    -  
+    - 
+     
 ## Terms
 - FC: full-connected layer
 
