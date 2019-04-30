@@ -4,7 +4,7 @@
 # @Author:  Chen Maosen
 # @Email:   chenmaosen@360.cn
 # @Date:    2018/11/07 10:25
-# @File:    seg_plot.py
+# @File:    plot_seg.py
 
 # @Content: 一些工具函数
 

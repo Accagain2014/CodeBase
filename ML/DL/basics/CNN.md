@@ -1,3 +1,13 @@
+## Why CNN
+- flat will lose a lot of information, eg: Spatial positioning of what’s next to what else
+- Features are hierarchical
+    - Composing high-complexity features out of low-complexity features is more efficient than learning high-complexity features directly.
+	    - e.g.: having an “circle” detector is useful for detecting faces… and basketballs
+- Features are translationally invariant
+    - If a feature is useful to compute at (x, y) it is useful to compute that feature at (x’, y’) as well
+- Convolutional networks are tailor-made for computer vision tasks.
+
+
 ## Basics
 
 Converlutions
@@ -5,12 +15,24 @@ Converlutions
 - Output: N-F+1 * N-F+1
 - Filter_nums = channel_input * channel_output, 每个filter对应一个channel(feature map)的映射, 
     - 比如前面16 channel, 后面36 channel, filter_size 5 * 5, 每个input channel对应36个channel, 最后形成的36个channel 是将前面16个channel汇聚？
+    - Filters always extend the full depth of the input volume
 - For each position of the filter, the dot-product is being calculated between the filter and the image pixels under the filter, which results in a single pixel in the output image.
 
 Pooling
-- pooling没有stride的概念
+- makes the representations smaller and more manageable 
+- operates over each activation map independently
 - conv -> activate -> pool
 - relu(max_pool(x)) == max_pool(relu(x))
+- calculation
+    - Input: W1 * H1 * D1   
+    - Filter_size: F, Stride S
+    - Output: 
+        - W2 = (W1 - F)/S + 1
+        - H2 = (H1 - F)/S + 1
+        - D2 = D1
+- tips
+    - it is not common to use zero-padding for Pooling layers
+    
 
 
 Why Padding?
@@ -58,9 +80,19 @@ Why Padding?
     - ![](../../../images/CNN/resnet.jpg)
 - 2013. Network in network.
 
+### CNN重要解释
+- Dosovitskiy et al, “Striving for Simplicity: The All Convolutional Net”, ICLR Workshop 2015
+    - 解释每个filter学习到的东西
+    - backpropagation
+- Simonyan et al, “Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps”, ICLR Workshop 2014
+- Yosinski et al, “Understanding Neural Networks Through Deep Visualization”, ICML DL Workshop 2015
+- Nguyen et al, “Multifaceted Feature Visualization: Uncovering the Different Types of Features Learned By Each Neuron in Deep Neural Networks”, ICML Visualization for Deep Learning Workshop 2016
+
+    
+
 ## CNN tips
 - 随着层数加深，nh, nw降低，nc增大
-- conv, pool, conv, pool, ..., fc, fc, ..., output
+- conv,[activation maps] activate, pool, conv, activate, pool, ..., fc, fc, ..., output
 - one by one conv
     - shrinking nc
     - 
