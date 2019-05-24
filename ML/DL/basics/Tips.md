@@ -87,3 +87,8 @@ Vt = a Vt-1 + (1-a) Lt
     
 - train-dev error
     - tht gap bettween train-dev error and dev error = **judge mismatch problem**
+
+
+14. learning rate
+    - 又叫step size
+    

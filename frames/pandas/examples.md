@@ -23,3 +23,27 @@ for name, group in regiment.groupby('regiment'):
 3. Present the mean preTestScores grouped by regiment and company without heirarchical indexing¶
 regiment.groupby(['regiment', 'company']).preTestScore.mean().unstack()
 
+4. 
+  - resample, idxmax(0)
+  
+
+5. 将group之后的index重新拿出来
+    - customers['Country'] = customers.index.get_level_values(1)
+    
+    
+6. 分组可视化
+    '''
+    # creates the FaceGrid
+    g = sns.FacetGrid(customers, col="Country")
+
+    # map over a make a scatterplot
+    g.map(plt.scatter, "Quantity", "UnitPrice", alpha=1)
+
+    # adds legend
+    g.add_legend()
+    '''
+    
+7. pd.cut
+    - buckets = np.arange(price_start,price_end,price_interval)
+    - revenue_per_price = online_rt.groupby(pd.cut(online_rt.UnitPrice, buckets)).Revenue.sum()
+    

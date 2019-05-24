@@ -78,7 +78,8 @@
     - Numpy
         - NumPy supports ndarray, but doesn't offer methods to create tensor functions and automatically compute derivatives, nor GPU support.
         - TensorFlow can be more efficient than NumPy because TensorFlow knows the entire computation graph that must be executed, while NumPy only knows the computation of a single mathematical operation at a time.
-        - TensorFlow can also automatically calculate the gradients that are needed to optimize the variables of the graph so as to make the model perform better. 
+        - TensorFlow can also automatically calculate the gradients that are needed to optimize the variables of the graph so as to make the model perform better.
+         
         
     - PyTorch
         - PyTorch’s dynamic graphs.

@@ -22,8 +22,16 @@ Why Tensorflow?
     - tf.concat
         - 对指定的axis进行拼接
     - tf.slice
-        - 对连续的区间，进行裁剪
-        
+        - 对连续的区间，进行裁剪, 类似于多维的range
+        - tf.strided_slice
+        - tf.split
+    - tf.stack
+        - 在每一维堆积操作
+        - x = [1, 4], y = [2, 5], z = [3, 6], tf.stack([x, y, z], 1) => [[1, 2, 3], [4, 5, 6]]
+    - tf.unstack
+        - 对每一维拆堆积操作
+        - x = [[1, 2, 3], [4, 5, 6]] , tf.unstack(x, axis=1) => [array[1, 4], array[2, 5], array[3, 6]]
+    
     - tf.tile(input, multiples)
         - 对input[i]复制multiples[i]次
         - This operation creates a new tensor by replicating input multiples times. The output tensor's i'th dimension has input.dims(i) * multiples[i] elements, and the values of input are replicated multiples[i] times along the 'i'th dimension. 

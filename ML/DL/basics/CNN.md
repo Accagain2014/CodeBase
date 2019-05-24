@@ -30,9 +30,16 @@ Pooling
         - W2 = (W1 - F)/S + 1
         - H2 = (H1 - F)/S + 1
         - D2 = D1
-- tips
+Tips
     - it is not common to use zero-padding for Pooling layers
-    
+    - 随着层数加深，nh, nw降低，nc增大
+    - conv,[activation maps] activate, pool, conv, activate, pool, ..., fc, fc, ..., output
+    - one by one conv
+        - shrinking nc
+    - lower layers extract features related to content
+    - higher layers extract features related to style
+  
+
 
 
 Why Padding?
@@ -52,6 +59,7 @@ Why Padding?
 - Advantage
     - It allows you to use a CONV layer without necessarily shrinking the height and width of the volumes. This is important for building deeper networks, since otherwise the height/width would shrink as you go to deeper layers. 
     - It helps us keep more of the information at the border of an image. Without padding, very few values at the next layer would be affected by pixels as the edges of an image.
+
 
 ![](../../../images/CNN/zero_padding.jpg)
 
@@ -89,13 +97,6 @@ Why Padding?
 - Nguyen et al, “Multifaceted Feature Visualization: Uncovering the Different Types of Features Learned By Each Neuron in Deep Neural Networks”, ICML Visualization for Deep Learning Workshop 2016
 
     
-
-## CNN tips
-- 随着层数加深，nh, nw降低，nc增大
-- conv,[activation maps] activate, pool, conv, activate, pool, ..., fc, fc, ..., output
-- one by one conv
-    - shrinking nc
-    - 
      
 ## Terms
 - FC: full-connected layer

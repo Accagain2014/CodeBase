@@ -12,3 +12,4 @@ _PrelimPrediction = collections.namedtuple(  # pylint: disable=invalid-name
       
 all_predictions = collections.OrderedDict()
 
+list[::]
