@@ -33,6 +33,14 @@ def howmany_within_range(row, minimum=4, maximum=8):
 			count = count + 1
 	return count
 
+def howmany_within_range_2(i, row, minimum=4, maximum=8):
+	"""Returns how many numbers lie within `maximum` and `minimum` in a given `row`"""
+	count = 0
+	for n in row:
+		if minimum <= n <= maximum:
+			count = count + 1
+	return (i, count)
+
 
 def test_brute_solution(data):
 	now_time = time()
@@ -70,10 +78,27 @@ def test_multi_startmap(data):
 
 
 
+def test_proc_apply(data):
+	now_time = time()
+	pool = mp.Pool(mp.cpu_count())
+	results = []
+	def _collect_result(result):
+		results.append(result)
+	for i, row in enumerate(data):
+		pool.apply_async(howmany_within_range_2, args=(i, row, 4, 8), callback=_collect_result)
+	pool.close()
+	pool.join()
+	results.sort(key=lambda x: x[0])
+	results = [ r for i, r in results]
+	print(results[:10])
+	print("execute time: {}s".format((float(time())-float(now_time))))
+
+
 
 if __name__ == '__main__':
 	data = get_data()
 	test_brute_solution(data)
 	#test_multi_apply(data)
 	test_multi_map(data)
-	test_multi_startmap(data)
+	#test_multi_startmap(data)
+	test_proc_apply(data)
