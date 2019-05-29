@@ -8,3 +8,8 @@
         - https://github.com/facebookresearch/faiss/blob/master/tutorial/python/4-GPU.py
     - on gpu
         - https://github.com/facebookresearch/faiss/wiki/Running-on-GPUs
+        
+        
+## 功能
+    - 支持write_index, save_index
+    - 只支持np.float32建索引

@@ -135,7 +135,7 @@ num_skips = 2         # How many times to reuse an input to generate a label.
 # validation samples to the words that have a low numeric ID, which by
 # construction are also the most frequent.
 valid_size = 16     # Random set of words to evaluate similarity on.
-valid_window = 100  # Only pick dev samples in the head of the distribution.
+valid_window = 100  # Only pick dev samples in the head of the multithread.
 valid_examples = np.random.choice(valid_window, valid_size, replace=False)
 num_sampled = 64    # Number of negative examples to sample.
 

@@ -3,7 +3,7 @@
 
 # @Author:  Accagain
 # @Date:    2019/03/11 19:15
-# @File:    multi_threads_findmax.py
+# @File:    multithreads_findmax.py
 
 # @Content: Use multi threads to find max element in long array.
 
@@ -34,7 +34,7 @@ def multithreads_findmax(input=[2, 43, 3, -1, 0, 100], cpus=multiprocessing.cpu_
 
     print("all split inputs: {}".format(split_inputs))
     pool = Pool()
-    res = pool.map(partial(_find_max, idx="1"), split_inputs)
+    res = pool.map(partial(_find_max, idx="1"), split_inputs) # 传参数
     print(res)
 
 
