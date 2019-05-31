@@ -8,8 +8,6 @@
 ## problems
 - How to structure the code and understand the syntax to enable parallel processing using multiprocessing?
 - How to implement synchronous and asynchronous parallel processing?
-- How to parallelize a Pandas DataFrame?
-- 
 
 
 
@@ -36,4 +34,11 @@
     - Main class
         - Pool
         - Process
-        
+- os.system("cmd")
+- subprocess.run(["df", "-h", "/home"])
+- **pathos** 对自定义class不能序列化的，可以采用 [pathos](https://github.com/uqfoundation/pathos)
+    - dill: a utility to serialize all of python
+    - This is because dill is used instead of pickle or cPickle, and dill can serialize almost anything in python.
+    - https://stackoverflow.com/questions/1816958/cant-pickle-type-instancemethod-when-using-multiprocessing-pool-map
+    
+    
