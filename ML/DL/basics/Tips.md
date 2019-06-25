@@ -91,4 +91,7 @@ Vt = a Vt-1 + (1-a) Lt
 
 14. learning rate
     - 又叫step size
-    
+  
+15. RNNs gradients vanishing and explosion
+    - solutions
+        - the introduction of gating in LSTMs and the gradient clipping technique (Graves, 2013)

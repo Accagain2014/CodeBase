@@ -36,6 +36,7 @@ def softmaxe_cross_entropy(X, y, using_onehot=True):
 	X = softmax(X)
 	return cross_entropy(X, y, using_onehot)
 
+
 def huber_loss(pred, y, alpha):
 	'''
 		In statistics, the Huber loss is a loss function used in robust regression, that is less sensitive to outliers in data than the squared error loss.
@@ -65,9 +66,13 @@ def hinge_loss(pred, y):
 
 if __name__ == '__main__':
 	labels = np.array([
+		[0, 1],
+		[0, 1],
 		[1, 0]
 	])
 	logits = np.array([
-		[0.5, 0.5]
+		[1.0/3, 2.0/3],
+		[1.0/3, 2.0/3],
+		[1.0/3, 2.0/3]
 	])
 	print(cross_entropy(logits, labels, True))

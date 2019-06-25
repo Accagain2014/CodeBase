@@ -1,5 +1,5 @@
 ## Transfer Learning
-- Frozen the weights in old model, just
+- Frozen the weights in old model, just updates new weights
 
 
 ## Finetune

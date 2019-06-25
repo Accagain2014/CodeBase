@@ -19,17 +19,11 @@
 # args = parser.parse_args()
 
 
-import argparse
-arg_parser = argparse.ArgumentParser(description="svideo_log_stat")
-arg_parser.add_argument("--log_mapper", action="store_true",
-                        help="Extract necessary info from video_feedback log")
-arg_parser.add_argument("--log_reducer", action="store_true",
-                        help="Extract necessary info from video_feedback log")
-
-arg_parser.add_argument("--today", type=str, default=None,
-                        help="")
-args = arg_parser.parse_args()
-
-args.log_mapper = "dff"
-
-print(args.log_mapper)
+def parse_args():
+  parser = argparse.ArgumentParser(description='tokenized desc')
+  parser.add_argument('--tag_path', help='tag path', type=str)
+  parser.add_argument('--src_path', help='src path', type=str)
+  parser.add_argument('--dst_path', help='dst path', type=str)
+  args = parser.parse_args()
+  log.info(args)
+  return args

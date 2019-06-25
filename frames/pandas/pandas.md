@@ -29,3 +29,7 @@
 ## Tips
     - np.nan
     
+    
+## to_html中文乱码
+    - stat_html = '<meta charset="utf-8"> '
+    

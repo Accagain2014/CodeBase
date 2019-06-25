@@ -15,7 +15,6 @@
     - Sessions allocate memory to store variable values
      
 
-
 - three ways for data pipeline
     - Placeholder 
         - When you have a large graph and just want to test out certain parts, you can provide dummy values so TensorFlow won't waste time doing unnecessary computations.

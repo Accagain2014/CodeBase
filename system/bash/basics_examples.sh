@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# 设置分隔，默认是空格分隔
+IFS=$'\n'
+
+
 # 数组使用
 array=(1 2 3 8 7 6) # 定义
 echo ${array[0]} # 访问

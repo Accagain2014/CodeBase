@@ -19,3 +19,6 @@ X = tf.convert_to_tensor(_X)
 
 out = tf.cumsum(X, axis=1)
 print(out.eval())
+
+
+
