@@ -41,4 +41,19 @@
     - This is because dill is used instead of pickle or cPickle, and dill can serialize almost anything in python.
     - https://stackoverflow.com/questions/1816958/cant-pickle-type-instancemethod-when-using-multiprocessing-pool-map
     
-    
+   
+   
+### 
+    - import pathos.pools as pp
+ 
+ 
+ ### diff between ProcessPoolExecutor and ThreadPoolExecutor
+- But of course, we would want to use the ProcessPoolExecutor for CPU intensive tasks. The ThreadPoolExecutor is better suited for network operations or I/O.
+- While the API is similar, we must remember that the ProcessPoolExecutor uses the multiprocessing module and is not affected by the Global Interpreter Lock. 
+- However, we can not use any objects that is not picklable. So we need to carefully choose what we use/return inside the callable passed to process pool executor.
+
+
+
+with ThreadPoolExecutor(max_workers=1) as executor:
+    future = executor.submit(pow, 323, 1235)
+    print(future.result())

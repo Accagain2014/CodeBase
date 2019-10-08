@@ -30,8 +30,11 @@
 - Deep learning for NLP
     - [Stanford CS 20: Tensorflow for Deep Learning Research](http://web.stanford.edu/class/cs20si/)
         - [Videos](https://www.youtube.com/playlist?list=PLIDllPt3EQZoS8gCP3cw273Cq9puuPLTg)
+        - basic concept about tf
     - [CS224n: Natural Language Processing with Deep Learning](http://web.stanford.edu/class/cs224n/)
-        - [Videos]()
+        - [2019_Videos](https://www.youtube.com/playlist?list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z)
+        - [2019_Website](http://web.stanford.edu/class/cs224n/)
+        
     - [A funny course by kaggler. Practical Deep Learning For Coders](https://course.fast.ai/index.html)
 
 ## 分布式
@@ -41,5 +44,7 @@
 ---
 - [mit 6.033](http://web.mit.edu/6.033/www/general.shtml)
     - 分布式
-  
+ 
+ 
+## 优化课程
  

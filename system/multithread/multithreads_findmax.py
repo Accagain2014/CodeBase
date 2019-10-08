@@ -10,11 +10,13 @@
 
 from multiprocessing import Pool
 import multiprocessing
+from functools import partial
+
 import time
 import math
 import uuid
 from itertools import  product
-from functools import partial
+
 
 
 def _find_max(sub_input, idx):

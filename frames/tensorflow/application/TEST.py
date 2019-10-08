@@ -17,7 +17,8 @@ sess = tf.InteractiveSession()
 _X = np.array([[1,2,3], [4,5,6]])
 X = tf.convert_to_tensor(_X)
 
-out = tf.cumsum(X, axis=1)
+out = tf.reduce_sum(X, axis=-1)
+#out = tf.cumsum(X, axis=1)
 print(out.eval())
 
 

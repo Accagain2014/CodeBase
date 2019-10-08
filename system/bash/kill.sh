@@ -12,3 +12,6 @@ done
 # 杀死包含phantomjs的所有进程
 
 ps aux | grep $process_name | awk "{system(\" kill -9 \" \$2)}"
+
+
+yarn application -kill $1

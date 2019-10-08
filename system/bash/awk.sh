@@ -14,5 +14,7 @@ cat all_part.csv | awk -F"\t" '{if(!$2) {C++; print $0}} END {print C} '
 
 
 
+
+
 ### Tips
 - 注意最后使用'{}', 而不是"{}"

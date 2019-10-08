@@ -8,7 +8,7 @@
 
 # @Content: 处理python控制台参数样例
 
-# import argparse
+import argparse
 #
 # parser = argparse.ArgumentParser(description="Args Summary Explanation.")
 #
@@ -18,6 +18,8 @@
 #
 # args = parser.parse_args()
 
+
+import argparse
 
 def parse_args():
   parser = argparse.ArgumentParser(description='tokenized desc')
