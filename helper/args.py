@@ -23,9 +23,6 @@ import argparse
 
 def parse_args():
   parser = argparse.ArgumentParser(description='tokenized desc')
-  parser.add_argument('--tag_path', help='tag path', type=str)
   parser.add_argument('--src_path', help='src path', type=str)
-  parser.add_argument('--dst_path', help='dst path', type=str)
   args = parser.parse_args()
-  log.info(args)
   return args
