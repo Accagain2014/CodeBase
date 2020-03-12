@@ -106,3 +106,12 @@
     - ![](http://progressed.io/bar/30?title=todo)
     - [Course](http://web.stanford.edu/class/cs246/handouts.html)
     - [PDF 3rd](http://i.stanford.edu/~ullman/mmds/book0n.pdf)
+    
+
+## 深度学习
+- 《Dive into Deep Learning: an interactive deep learning book with code, math, and discussions》 Aston Zhang and Zachary C. Lipton and Mu Li and Alexander J. Smola
+    - 2019. [Code](https://github.com/d2l-ai/d2l-en)
+    - [website](http://www.d2l.ai/)
+    - [STAT 157 Course at UC Berkeley, Spring 2019](http://courses.d2l.ai/berkeley-stat-157/syllabus.html)
+    
+    

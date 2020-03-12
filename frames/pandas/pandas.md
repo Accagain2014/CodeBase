@@ -24,7 +24,12 @@
         - pandas.set_option('display.max_columns', None)
         - pd.set_option('display.max_colwidth', -1)
         
-  
-        
-        
-       
+    - 设置element中存在', ", “的影响, 在pd.read_csv中添加 quoting=csv.QUOTE_NONE
+
+## Tips
+    - np.nan
+    
+    
+## to_html中文乱码
+    - stat_html = '<meta charset="utf-8"> '
+    

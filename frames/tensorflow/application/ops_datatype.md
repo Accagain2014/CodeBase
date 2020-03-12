@@ -15,7 +15,6 @@
     - Sessions allocate memory to store variable values
      
 
-
 - three ways for data pipeline
     - Placeholder 
         - When you have a large graph and just want to test out certain parts, you can provide dummy values so TensorFlow won't waste time doing unnecessary computations.
@@ -62,3 +61,13 @@
         - Uses TensorFlow ops to perform preprocessing, but driven by client threads, and complex.
 
 - feedable tensor
+
+- TFRecord
+    - The recommended format for TensorFlow
+    - Binary file format
+        - a serialized tf.train.Example protobuf object
+    - why binary
+        - make better use of disk cache
+        - faster to move around
+        - can handle data of different types
+            - e.g. you can put both images and labels in one place

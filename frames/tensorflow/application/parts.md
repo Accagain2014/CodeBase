@@ -1,5 +1,9 @@
 ## Native tensorflow
 
+## builder API
+- This builder API is automatically installed as part of TensorFlow, so you no longer have to install a separate Python package as was needed with PrettyTensor.
+- tf.layers
+
 ## Other Frameworks
  
 ### TensorFlow-Slim [tf.contrib.slim]

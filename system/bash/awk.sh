@@ -8,4 +8,12 @@
 awk 'BEGIN {OFS="\t"} {print $1}' filename
 awk -F"\t" '{print $1}'
 
-#
+# example 2: 统计第二列为空的行数，并输出该行
+cat all_part.csv | awk -F"\t" '{if(!$2) {C++; print $0}} END {print C} '
+# END表示最后输出, 否则每一行输出
+
+
+# example 3:
+
+### Tips
+- 注意最后使用'{}', 而不是"{}"

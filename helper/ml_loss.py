@@ -17,6 +17,7 @@ def softmax(X):
 
 def cross_entropy(X, y, using_onehot=True):
 	"""
+	log_loss / cross_entropy / categorical_crossentropy
     X is the logits
     y is labels (num_examples, 1)
     	Note that y is not one-hot encoded vector.
@@ -34,6 +35,7 @@ def cross_entropy(X, y, using_onehot=True):
 def softmaxe_cross_entropy(X, y, using_onehot=True):
 	X = softmax(X)
 	return cross_entropy(X, y, using_onehot)
+
 
 def huber_loss(pred, y, alpha):
 	'''
@@ -64,9 +66,13 @@ def hinge_loss(pred, y):
 
 if __name__ == '__main__':
 	labels = np.array([
+		[0, 1],
+		[0, 1],
 		[1, 0]
 	])
 	logits = np.array([
-		[0.5, 0.5]
+		[1.0/3, 2.0/3],
+		[1.0/3, 2.0/3],
+		[1.0/3, 2.0/3]
 	])
 	print(cross_entropy(logits, labels, True))

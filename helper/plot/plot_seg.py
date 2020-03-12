@@ -4,7 +4,7 @@
 # @Author:  Chen Maosen
 # @Email:   chenmaosen@360.cn
 # @Date:    2018/11/07 10:25
-# @File:    seg_plot.py
+# @File:    plot_seg.py
 
 # @Content: 一些工具函数
 
@@ -101,7 +101,7 @@ def seg_stat(df, column, function, stat_key='vid', save_path=[None, None]):
     new_column = column+"_seg"
     df[new_column] = df[column].map(function)
     group_vid = df.groupby([new_column])[stat_key].count()
-    title = stat_key + ":" + column+" seg count distribution"
+    title = stat_key + ":" + column+" seg count multithread"
     figsize=(8, 7)
     show(group_vid.plot(kind="bar", grid=True, title=title, figsize=figsize), save_path=save_path[0])
 
@@ -109,7 +109,7 @@ def seg_stat(df, column, function, stat_key='vid', save_path=[None, None]):
     sum = group_column_vid[stat_key].sum()
     group_column_vid['rate'] = group_column_vid[stat_key].map(lambda x: round(x * 1.0 / sum, 2))
     group_column_vid.reset_index(inplace=True)
-    title = stat_key + ":" + column+" seg rate distribution"
+    title = stat_key + ":" + column+" seg rate multithread"
 
     show(group_column_vid.plot(x=new_column, y='rate', kind="bar", grid=True, title=title, figsize=figsize), save_path=save_path[1])
 
@@ -174,13 +174,13 @@ def seg_two_column_stat(df, column, function, y_column="v_watch_degree", flag=0,
     df[new_column] = df[column].map(function)
     if flag == 0:
         group_vid = df.groupby([new_column])[y_column].mean().round(2)
-        show(group_vid.plot(kind="bar", grid=True, title=column+" avg " + y_column + " distribution", figsize=figsize), save_path=save_path)
+        show(group_vid.plot(kind="bar", grid=True, title=column+" avg " + y_column + " multithread", figsize=figsize), save_path=save_path)
     elif flag == 1:
         group_vid = df.groupby([new_column])[y_column].count()
-        show(group_vid.plot(kind="bar", grid=True, title=column + " count " + y_column + " distribution", figsize=figsize), save_path=save_path)
+        show(group_vid.plot(kind="bar", grid=True, title=column + " count " + y_column + " multithread", figsize=figsize), save_path=save_path)
     elif flag == 2:
         group_vid = df.groupby([new_column])[y_column].sum()
-        show(group_vid.plot(kind="bar", grid=True, title=column + " sum " + y_column + " distribution", figsize=figsize), save_path=save_path)
+        show(group_vid.plot(kind="bar", grid=True, title=column + " sum " + y_column + " multithread", figsize=figsize), save_path=save_path)
 
 def write_data_to_file(filename, data):
     with open(filename, "w") as fw:
