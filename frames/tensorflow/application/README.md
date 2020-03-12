@@ -19,3 +19,6 @@
     - 第一步：构建图
     - 第二步：用session执行图上的操作
 
+## Useful Points
+- TensorFlow presents you with a declarative programming model because the specification of your computation (i.e., the creation of a Graph) is separated from the execution of it (i.e., running parts of the graph with a Session).
+    - 问题？ TF 2.0, 支持Eager Execution, 建图和计算没有分离，是怎样做到速度跟上呢？
