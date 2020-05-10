@@ -15,3 +15,7 @@
             
         > 
             - [var.name for var in tf.trainable_variables()]
+            
+
+### 正则化loss
+- reg_losses = tf.get_collection(tf.GraphKeys.REGULARIZATION_LOSSES)  # 可以直接得到图上的权重的正则化loss

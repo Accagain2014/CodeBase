@@ -220,5 +220,3 @@ print '......'*10+'\n'
 print '**** Stacking Valid'
 tools.calculate(layer_2_valid, 1254)
 #del stacking_train_data, stacking_train_sparse, stacking_valid_sparse
-    
-    

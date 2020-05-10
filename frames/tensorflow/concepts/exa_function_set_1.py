@@ -4,7 +4,7 @@
 # @Author:  Chen Maosen
 # @Email:   chenmaosen@360.cn
 # @Date:    2018/10/17 14:53
-# @File:    tensorflow_examples.py
+# @File:    exa_function_set_1.py
 
 # @Content: Learning tensorflow from example codes
 

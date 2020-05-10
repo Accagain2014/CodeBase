@@ -3,9 +3,9 @@
 
 # @Author:  Accagain
 # @Date:    2019/02/28 14:28
-# @File:    solve_vectorization.py
+# @File:    exa_problem_set_1.py
 
-# @Content: solve problems proposed in vectorization.md
+# @Content: solve problems proposed in exa_problem_set_1.md
 
 import tensorflow as tf
 

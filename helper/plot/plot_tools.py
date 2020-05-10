@@ -57,8 +57,8 @@ def plotCurve():
 
 	ax = plt.subplot(111)
 	for i in range(len(r)):
-		y = map(lambda x: 1.0-pow((1-pow(x, r[i])), b[i]), s)
-		print y
+		y = list(map(lambda x: 1.0-pow((1-pow(x, r[i])), b[i]), s))
+		print(y)
 		#ax = plt.subplot(int('31'+str(i+1)))
 		ax.plot(s, y, lineKind[i], label=labelKind[i])
 	plt.legend(loc=4)
@@ -73,14 +73,15 @@ def show_bars(fr, key_col, others, kind='bar'):
 	:param others:
 	:param kind:
 	:return:
-	''''''
-    fr.plot(x=key_col, y=others, xticks=fr[key_col].values, kind=kind, figsize=(15, 8))
-    plt.grid(True)
-    plt.show()
+	'''
+	fr.plot(x=key_col, y=others, xticks=fr[key_col].values, kind=kind, figsize=(15, 8))
+	plt.grid(True)
+	plt.show()
 
 if __name__ == '__main__':
 	#plotGraph([[3], [3], [3, 4], [0, 2, 1], [2]], ['A'+str(i+1) for i in range(5)])
 	
 	plotCurve()
+	pass
 
 

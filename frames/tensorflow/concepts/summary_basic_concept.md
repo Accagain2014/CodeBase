@@ -72,6 +72,8 @@
 - scope
     - name scope
         - Group nodes together with tf.name_scope(name)
+        - 作用于操作
+        
     - variable scope
         - Variable scope facilitates variable sharing
         - get_variable
